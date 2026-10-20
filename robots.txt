@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
 Sitemap: https://homegrocery.github.io/download-app/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /

@@ -1,0 +1,27 @@
+{
+  "name": "Home Grocery — घरगुती किराणा यादी",
+  "short_name": "Home Grocery",
+  "description": "स्मार्ट आणि १००% ऑफलाइन किराणा नियोजन आणि बजेट ॲप",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#172554",
+  "theme_color": "#172554",
+  "lang": "mr-IN",
+  "categories": ["shopping", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "./brand/home-grocery-logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./grocery-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
