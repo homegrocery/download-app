@@ -1,0 +1,13 @@
+{
+  "version": "1.0.1",
+  "versionCode": 9,
+  "build": 2,
+  "isMandatory": false,
+  "minSupportedBuild": 1,
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build2.apk",
+  "apkSize": 8894137,
+  "sha256": "7F6477CFADFE772DA89C35770337FD4AD0EE92B441F7A4AAFC09BF1C5D2AE244",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 2) - In-app APK updater, Firebase Cloud Sync, and App Server Status fixes.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 2) - इन-ॲप अपडेटर, फायरबेस क्लाउड सिंक, आणि सर्व्हर कनेक्टिव्हिटी सुधारणा.",
+  "publishedAt": "2026-10-24T06:00:00.000Z"
+}
