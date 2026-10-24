@@ -1,13 +1,13 @@
 {
   "version": "1.0.1",
-  "versionCode": 10,
-  "build": 3,
+  "versionCode": 11,
+  "build": 4,
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build3.apk",
-  "apkSize": 8834980,
-  "sha256": "172A816035A8CCFFB547BE7B985C9C283CC597217D8D04E6BE4E4317646EC301",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 3) - Firebase Cloud Backup, In-app APK Updater, and Primary Server Verification.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 3) - फायरबेस क्लाउड बॅकअप, इन-ॲप अपडेटर, आणि सर्व्हर पडताळणी सुधारणा.",
-  "publishedAt": "2026-10-24T07:30:00.000Z"
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build4.apk",
+  "apkSize": 8895187,
+  "sha256": "7443a6b5efd98e92756390182e3d912dd1c0ffd3bfcafd19ce4e4d6d2756951e",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 4) - Firebase Live Rules Security, In-App Updater System Handoff Fix, and Primary Server Verification.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 4) - फायरबेस सुरक्षा नियम, इन-ॲप अपडेटर सिस्टम हँडऑफ दुरुस्ती, आणि सर्व्हर पडताळणी.",
+  "publishedAt": "2026-10-24T08:30:00.000Z"
 }
