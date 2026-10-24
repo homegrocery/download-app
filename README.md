@@ -3,18 +3,18 @@
 Official public distribution repository for Home Grocery (घरगुती किराणा यादी) - a modern, bilingual Marathi/English grocery budgeting and inventory management application.
 
 - **Live Public Website:** [https://homegrocery.github.io/download-app/](https://homegrocery.github.io/download-app/)
-- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build4.apk](./HomeGrocery-v1.0.1-build4.apk)
+- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build5.apk](./HomeGrocery-v1.0.1-build5.apk)
 - **Direct Update Manifest:** [update.json](./update.json)
 
 ---
 
-## Latest Release: v1.0.1 (Build 4)
+## Latest Release: v1.0.1 (Build 5)
 
 - **Application Name:** Home Grocery (घरगुती किराणा यादी)
 - **Package ID:** `com.homegrocery.app`
 - **Version Name:** `1.0.1`
-- **Internal Version Code:** `11` (Build 4)
-- **File Name:** `HomeGrocery-v1.0.1-build4.apk`
+- **Internal Version Code:** `11` (Build 5)
+- **File Name:** `HomeGrocery-v1.0.1-build5.apk`
 - **File Size:** 8,895,187 bytes (8.48 MB)
 - **SHA-256 Checksum:** `7443A6B5EFD98E92756390182E3D912DD1C0FFD3BFCAFD19CE4E4D6D2756951E`
 - **Architecture:** Universal (ARM64, ARMv7, x86_64)
@@ -24,7 +24,7 @@ Official public distribution repository for Home Grocery (घरगुती क
 
 ---
 
-## Key Highlights in v1.0.1 (Build 4)
+## Key Highlights in v1.0.1 (Build 5)
 
 1. **Firebase Firestore Security Rules & Tenancy Isolation:**
    - Strict tenant isolation: user-scoped security rules matching root user document (`users/{userId}`) and all nested subcollections (`{document=**}`).
@@ -54,14 +54,14 @@ To verify the integrity of the downloaded APK:
 
 ### PowerShell (Windows):
 ```powershell
-Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.1-build4.apk
+Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.1-build5.apk
 # Expected output: 7443A6B5EFD98E92756390182E3D912DD1C0FFD3BFCAFD19CE4E4D6D2756951E
 ```
 
 ### Linux / macOS:
 ```bash
-sha256sum HomeGrocery-v1.0.1-build4.apk
-# Expected output: 7443a6b5efd98e92756390182e3d912dd1c0ffd3bfcafd19ce4e4d6d2756951e
+sha256sum HomeGrocery-v1.0.1-build5.apk
+# Expected output: 840bd65de630833cb04c086c1c19282b5eb5127b17c7f09c187beacec3a75439
 ```
 
 ---

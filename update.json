@@ -1,13 +1,13 @@
 {
   "version": "1.0.1",
-  "versionCode": 11,
-  "build": 4,
+  "versionCode": 12,
+  "build": 5,
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build4.apk",
-  "apkSize": 8895187,
-  "sha256": "7443a6b5efd98e92756390182e3d912dd1c0ffd3bfcafd19ce4e4d6d2756951e",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 4) - Firebase Live Rules Security, In-App Updater System Handoff Fix, and Primary Server Verification.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 4) - फायरबेस सुरक्षा नियम, इन-ॲप अपडेटर सिस्टम हँडऑफ दुरुस्ती, आणि सर्व्हर पडताळणी.",
-  "publishedAt": "2026-10-24T08:30:00.000Z"
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build5.apk",
+  "apkSize": 8835946,
+  "sha256": "840bd65de630833cb04c086c1c19282b5eb5127b17c7f09c187beacec3a75439",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 5) - Recovery Code Status Live Sync to Admin ERP, Firebase Cloud Sync Path Alignment & Security Rules, Administrative Account Lock/Activate feature, and Physical Device Release.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 5) - रिकव्हरी कोड स्थिती लाइव्ह सिंक, फायरबेस सुरक्षा नियम जुळवणी, खाते लॉक/सक्रिय करण्याची सुविधा, आणि प्रत्यक्ष डिव्हाइस रिलीज.",
+  "publishedAt": "2026-10-24T09:47:58.533Z"
 }
