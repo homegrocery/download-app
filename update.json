@@ -1,13 +1,13 @@
 {
   "version": "1.0.1",
-  "versionCode": 13,
-  "build": 6,
+  "versionCode": 14,
+  "build": 7,
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build6.apk",
-  "apkSize": 8840048,
-  "sha256": "d3e93293876b1ceef3953e6f256d431b1dc1d9894c2e5512cdd575dbd7714759",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 6) - Failed Login Attempt Tracking, Automatic 5-Attempt Lockout, Reactivation Requests Workflow, Admin Approval/Rejection, and Session Revocation.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 6) - अयशस्वी लॉगिन प्रयत्न ट्रॅकिंग, ५ प्रयत्नांनंतर स्वयंचलित लॉक, खाते पुन्हा सक्रिय करण्याची विनंती, ॲडमिन मंजुरी/नकार आणि सत्र व्यवस्थापन.",
-  "publishedAt": "2026-10-25T05:45:00.000Z"
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build7.apk",
+  "apkSize": 9375768,
+  "sha256": "9DB407B3D3EB258C0B90FDBAE3F9D6190247E377988ED75177E1540CD780FA21",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 7) - Roman Marathi typing transliteration, Add Item required Marathi name with live suggestions, and verified direct APK download integrity.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 7) — रोमन मराठी टायपिंग व देवनागरी सूचना, नवीन वस्तूंसाठी आवश्यक मराठी नाव आणि १००% सुरक्षित थेट APK डाऊनलोड पडताळणी.",
+  "publishedAt": "2026-10-25T16:30:00.000Z"
 }
