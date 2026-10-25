@@ -1,14 +1,14 @@
 {
   "version": "1.0.1",
-  "versionCode": 14,
-  "build": 7,
+  "versionCode": 15,
+  "build": 8,
   "packageId": "com.homegrocery.app",
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build7.apk",
-  "apkSize": 9378245,
-  "sha256": "200090E78450AD7B719B0615239FF1B1493EC1900F6879B7DC26BD39A83D81D6",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 7) - Roman Marathi typing transliteration, Add Item required Marathi name with live suggestions, and mandatory SHA-256 binary integrity verification.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 7) — रोमन मराठी टायपिंग व देवनागरी सूचना, नवीन वस्तूंसाठी आवश्यक मराठी नाव आणि १००% सुरक्षित SHA-256 थेट APK डाऊनलोड पडताळणी.",
-  "publishedAt": "2026-10-25T17:30:00.000Z"
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build8.apk",
+  "apkSize": 9429395,
+  "sha256": "9ACE4DA60C6FDFB8A44FCED3CE43B6D902DB97541EBC1664FE85DA05ED0069E6",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 8) — Fix PostgreSQL synchronization error, offline temporary ID mapping, and ordered transaction mirroring.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 8) — पोस्टग्रेएसक्यूएल सिंक एरर दुरुस्ती, ऑफलाइन तात्पुरती ओळख मॅपिंग आणि अचूक डेटा सिंक्रोनायझेशन.",
+  "publishedAt": "2026-10-25T18:30:00.000Z"
 }

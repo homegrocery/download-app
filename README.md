@@ -3,20 +3,20 @@
 Official public distribution repository for Home Grocery (घरगुती किराणा यादी) - a modern, bilingual Marathi/English grocery budgeting and inventory management application.
 
 - **Live Public Website:** [https://homegrocery.github.io/download-app/](https://homegrocery.github.io/download-app/)
-- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build7.apk](./HomeGrocery-v1.0.1-build7.apk)
+- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build8.apk](./HomeGrocery-v1.0.1-build8.apk)
 - **Direct Update Manifest:** [update.json](./update.json)
 
 ---
 
-## Latest Release: v1.0.1 (Build 7)
+## Latest Release: v1.0.1 (Build 8)
 
 - **Application Name:** Home Grocery (घरगुती किराणा यादी)
 - **Package ID:** `com.homegrocery.app`
 - **Version Name:** `1.0.1`
-- **Internal Version Code:** `14` (Build 7)
-- **File Name:** `HomeGrocery-v1.0.1-build7.apk`
-- **File Size:** 9,378,245 bytes (8.94 MB)
-- **SHA-256 Checksum:** `200090E78450AD7B719B0615239FF1B1493EC1900F6879B7DC26BD39A83D81D6`
+- **Internal Version Code:** `15` (Build 8)
+- **File Name:** `HomeGrocery-v1.0.1-build8.apk`
+- **File Size:** 9,429,395 bytes (8.99 MB)
+- **SHA-256 Checksum:** `9ACE4DA60C6FDFB8A44FCED3CE43B6D902DB97541EBC1664FE85DA05ED0069E6`
 - **Architecture:** Universal (ARM64, ARMv7, x86_64)
 - **Target SDK:** Android 14 (API 34)
 - **Min SDK:** Android 5.1 (API 22)
@@ -24,9 +24,15 @@ Official public distribution repository for Home Grocery (घरगुती क
 
 ---
 
-## Key Highlights in v1.0.1 (Build 7)
+## Key Highlights in v1.0.1 (Build 8)
 
-1. **Mandatory SHA-256 Integrity Verification Before Installation:**
+1. **PostgreSQL Synchronization Error Permanent Fix:**
+   - Client Temporary ID Mapping: Automatically links offline temporary list IDs (`local-list-...`) and item IDs (`local-item-...`) to confirmed server database IDs, preventing `LIST_NOT_FOUND` errors on subsequent item mutations.
+   - Idempotent Retry & Duplicate Recovery: Safely handles duplicated month lists and existing item collisions by merging updates without throwing unhandled exceptions.
+   - Sequential PostgreSQL Write Mirroring: Serializes write operations into PostgreSQL in exact transaction order (lists before items), eliminating foreign-key race conditions (`shopping_items_list_id_fkey`).
+   - Startup Hydration: Added `sync_operations` table creation and migration hydration on backend startup.
+
+2. **Mandatory SHA-256 Integrity Verification Before Installation:**
    - Pre-download metadata validation requires a valid package ID (`com.homegrocery.app`), release version, positive file size, and valid 64-character hexadecimal SHA-256 checksum.
    - APK downloads stream strictly into temporary, untrusted staging storage and are never exposed to installer plugins until binary integrity is proven.
    - Complete exact binary SHA-256 computation over received bytes using native WebCrypto in web/preview and dual-layer cryptographic `MessageDigest` + `PackageManager` inspection in native Android.
