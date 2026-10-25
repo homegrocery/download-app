@@ -1,13 +1,13 @@
 {
   "version": "1.0.1",
-  "versionCode": 12,
-  "build": 5,
+  "versionCode": 13,
+  "build": 6,
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build5.apk",
-  "apkSize": 8835946,
-  "sha256": "840bd65de630833cb04c086c1c19282b5eb5127b17c7f09c187beacec3a75439",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 5) - Recovery Code Status Live Sync to Admin ERP, Firebase Cloud Sync Path Alignment & Security Rules, Administrative Account Lock/Activate feature, and Physical Device Release.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 5) - रिकव्हरी कोड स्थिती लाइव्ह सिंक, फायरबेस सुरक्षा नियम जुळवणी, खाते लॉक/सक्रिय करण्याची सुविधा, आणि प्रत्यक्ष डिव्हाइस रिलीज.",
-  "publishedAt": "2026-10-24T09:47:58.533Z"
+  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build6.apk",
+  "apkSize": 8840048,
+  "sha256": "d3e93293876b1ceef3953e6f256d431b1dc1d9894c2e5512cdd575dbd7714759",
+  "releaseNotes": "Home Grocery v1.0.1 (Build 6) - Failed Login Attempt Tracking, Automatic 5-Attempt Lockout, Reactivation Requests Workflow, Admin Approval/Rejection, and Session Revocation.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 6) - अयशस्वी लॉगिन प्रयत्न ट्रॅकिंग, ५ प्रयत्नांनंतर स्वयंचलित लॉक, खाते पुन्हा सक्रिय करण्याची विनंती, ॲडमिन मंजुरी/नकार आणि सत्र व्यवस्थापन.",
+  "publishedAt": "2026-10-25T05:45:00.000Z"
 }
