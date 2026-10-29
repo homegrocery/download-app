@@ -3,20 +3,20 @@
 Official public distribution repository for Home Grocery (घरगुती किराणा यादी) - a modern, bilingual Marathi/English grocery budgeting and inventory management application.
 
 - **Live Public Website:** [https://homegrocery.github.io/download-app/](https://homegrocery.github.io/download-app/)
-- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build8.apk](./HomeGrocery-v1.0.1-build8.apk)
+- **Direct APK Download (Latest):** [HomeGrocery-v1.0.2-build9.apk](./HomeGrocery-v1.0.2-build9.apk)
 - **Direct Update Manifest:** [update.json](./update.json)
 
 ---
 
-## Latest Release: v1.0.1 (Build 8)
+## Latest Release: v1.0.2 (Build 9)
 
 - **Application Name:** Home Grocery (घरगुती किराणा यादी)
 - **Package ID:** `com.homegrocery.app`
 - **Version Name:** `1.0.1`
-- **Internal Version Code:** `15` (Build 8)
-- **File Name:** `HomeGrocery-v1.0.1-build8.apk`
+- **Internal Version Code:** `15` (Build 9)
+- **File Name:** `HomeGrocery-v1.0.2-build9.apk`
 - **File Size:** 9,429,395 bytes (8.99 MB)
-- **SHA-256 Checksum:** `9ACE4DA60C6FDFB8A44FCED3CE43B6D902DB97541EBC1664FE85DA05ED0069E6`
+- **SHA-256 Checksum:** `5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD`
 - **Architecture:** Universal (ARM64, ARMv7, x86_64)
 - **Target SDK:** Android 14 (API 34)
 - **Min SDK:** Android 5.1 (API 22)
@@ -24,7 +24,7 @@ Official public distribution repository for Home Grocery (घरगुती क
 
 ---
 
-## Key Highlights in v1.0.1 (Build 8)
+## Key Highlights in v1.0.2 (Build 9)
 
 1. **PostgreSQL Synchronization Error Permanent Fix:**
    - Client Temporary ID Mapping: Automatically links offline temporary list IDs (`local-list-...`) and item IDs (`local-item-...`) to confirmed server database IDs, preventing `LIST_NOT_FOUND` errors on subsequent item mutations.
@@ -71,12 +71,12 @@ To verify the integrity of the downloaded APK:
 
 ### PowerShell (Windows):
 ```powershell
-Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.1-build7.apk
-# Expected output: 200090E78450AD7B719B0615239FF1B1493EC1900F6879B7DC26BD39A83D81D6
+Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.2-build9.apk
+# Expected output: 5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD
 ```
 
 ### Linux / macOS:
 ```bash
-sha256sum HomeGrocery-v1.0.1-build7.apk
-# Expected output: 200090e78450ad7b719b0615239ff1b1493ec1900f6879b7dc26bd39a83d81d6  HomeGrocery-v1.0.1-build7.apk
+sha256sum HomeGrocery-v1.0.2-build9.apk
+# Expected output: 200090e78450ad7b719b0615239ff1b1493ec1900f6879b7dc26bd39a83d81d6  HomeGrocery-v1.0.2-build9.apk
 ```
