@@ -61,9 +61,11 @@ sha256sum HomeGrocery-v1.0.1-build10.apk
 
 ---
 
-## Historical Releases
+## Historical Releases (Private Vault Archive)
 
-- **Build 9 (v1.0.2, versionCode 16):** [HomeGrocery-v1.0.2-build9.apk](./HomeGrocery-v1.0.2-build9.apk) (8,854,872 bytes, SHA-256: `5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD`)
-- **Build 8 (v1.0.1, versionCode 15):** [HomeGrocery-v1.0.1-build8.apk](./HomeGrocery-v1.0.1-build8.apk) (9,429,395 bytes)
-- **Build 7 (v1.0.1, versionCode 14):** [HomeGrocery-v1.0.1-build7.apk](./HomeGrocery-v1.0.1-build7.apk) (9,378,245 bytes)
-- **Build 6 (v1.0.0, versionCode 13):** [HomeGrocery-v1.0.0-build6.apk](./HomeGrocery-v1.0.0-build6.apk) (8,840,048 bytes)
+All pre-existing historical releases (Build 9, Build 8, Build 7, Build 6, etc.) are permanently preserved and cryptographically archived in the secure private release repository (`homegrocery/home-grocery-app`). In accordance with architecture and distribution policies, the public distribution repository serves strictly the latest approved production release (`v1.0.1 Build 10`).
+
+- **Build 9 (v1.0.2, versionCode 16):** Archived in Private Vault (`archive-v1.0.2-b9`, Asset ID: `702224957`, 8,854,872 bytes, SHA-256: `5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD`)
+- **Build 8 (v1.0.1, versionCode 15):** Archived in Private Vault (`archive-v1.0.1-b8`, Asset ID: `702223105`, 9,429,395 bytes)
+- **Build 7 (v1.0.1, versionCode 14):** Archived in Private Vault (`archive-v1.0.1-b7`, Asset ID: `702221144`, 9,378,245 bytes)
+- **Build 6 (v1.0.0, versionCode 13):** Archived in Private Vault (`archive-v1.0.1-b6`, Asset ID: `702220527`, 8,840,048 bytes)
