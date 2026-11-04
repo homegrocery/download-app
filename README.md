@@ -3,65 +3,43 @@
 Official public distribution repository for Home Grocery (घरगुती किराणा यादी) - a modern, bilingual Marathi/English grocery budgeting and inventory management application.
 
 - **Live Public Website:** [https://homegrocery.github.io/download-app/](https://homegrocery.github.io/download-app/)
-- **Direct APK Download (Latest):** [HomeGrocery-v1.0.2-build9.apk](./HomeGrocery-v1.0.2-build9.apk)
+- **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build10.apk](./HomeGrocery-v1.0.1-build10.apk)
 - **Direct Update Manifest:** [update.json](./update.json)
 
 ---
 
-## Latest Release: v1.0.2 (Build 9)
+## Latest Release: v1.0.1 (Build 10)
 
 - **Application Name:** Home Grocery (घरगुती किराणा यादी)
 - **Package ID:** `com.homegrocery.app`
 - **Version Name:** `1.0.1`
-- **Internal Version Code:** `15` (Build 9)
-- **File Name:** `HomeGrocery-v1.0.2-build9.apk`
-- **File Size:** 9,429,395 bytes (8.99 MB)
-- **SHA-256 Checksum:** `5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD`
+- **Internal Version Code:** `17` (Build 10)
+- **File Name:** `HomeGrocery-v1.0.1-build10.apk`
+- **File Size:** 7,797,519 bytes (7.44 MB)
+- **SHA-256 Checksum:** `A96F1012A78D298D1537BCBC4F8E3BD37E2B0866A9A628D026A4748003956CB8`
+- **Production Certificate SHA-256:** `244BC047A850D42D67EB6D48C633E52BC9E81EFB5F3CFAFBA991B96E8DF0C000`
+- **Signing Scheme:** v1 (JAR), v2 (APK Signature Scheme v2), v3 (APK Signature Scheme v3)
 - **Architecture:** Universal (ARM64, ARMv7, x86_64)
 - **Target SDK:** Android 14 (API 34)
 - **Min SDK:** Android 5.1 (API 22)
+- **Release Channel:** STABLE
 - **Author & Developer:** Santosh Koli
 
 ---
 
-## Key Highlights in v1.0.2 (Build 9)
+## Key Highlights in v1.0.1 (Build 10)
 
-1. **PostgreSQL Synchronization Error Permanent Fix:**
-   - Client Temporary ID Mapping: Automatically links offline temporary list IDs (`local-list-...`) and item IDs (`local-item-...`) to confirmed server database IDs, preventing `LIST_NOT_FOUND` errors on subsequent item mutations.
-   - Idempotent Retry & Duplicate Recovery: Safely handles duplicated month lists and existing item collisions by merging updates without throwing unhandled exceptions.
-   - Sequential PostgreSQL Write Mirroring: Serializes write operations into PostgreSQL in exact transaction order (lists before items), eliminating foreign-key race conditions (`shopping_items_list_id_fkey`).
-   - Startup Hydration: Added `sync_operations` table creation and migration hydration on backend startup.
+1. **Official Production RSA-4096 Release Signing:**
+   - Compiled with production Android release toolchain and signed with official RSA-4096 keystore certificate (`244BC047A850D42D67EB6D48C633E52BC9E81EFB5F3CFAFBA991B96E8DF0C000`).
+   - Compliant with Android v1, v2, and v3 signature requirements for long-term lineage and security.
 
-2. **Mandatory SHA-256 Integrity Verification Before Installation:**
-   - Pre-download metadata validation requires a valid package ID (`com.homegrocery.app`), release version, positive file size, and valid 64-character hexadecimal SHA-256 checksum.
-   - APK downloads stream strictly into temporary, untrusted staging storage and are never exposed to installer plugins until binary integrity is proven.
-   - Complete exact binary SHA-256 computation over received bytes using native WebCrypto in web/preview and dual-layer cryptographic `MessageDigest` + `PackageManager` inspection in native Android.
-   - Immediate rejection on any hash mismatch, truncated file, or corrupt archive: staging file is deleted immediately and installation blocked.
+2. **Offline Database Preservation & Migration Integrity:**
+   - Ensures local SQLite databases, customer shopping lists, and categorizations are 100% preserved during updates.
+   - Robust offline-first schema compatibility guarantees uninterrupted access when network connectivity is unavailable.
 
-2. **Roman Marathi Typing & Devanagari Transliteration Suggestions:**
-   - Type in everyday Roman English letters (`dudha`, `sakhar`, `kanda`, `batata`, `tandul`, `dahi`) and get instant, accurate Marathi Devanagari suggestions (`दूध`, `साखर`, `कांदा`, `बटाटा`, `तांदूळ`, `दही`).
-   - Clickable suggestion chips beneath the Marathi field allow easy selection of alternate orthographies and spellings.
-   - Marathi item name is now strictly required for all new and edited items, ensuring complete bilingual catalog integrity.
-   - Preserves manual edits and corrections without unintended overwrites, with a one-click "पुन्हा सुचवा / Re-suggest" option.
-   - Fully offline-capable transliteration engine with grocery lexicon, phonetic rule-based transliterator, and brand protection (e.g., Horlicks, Colgate, Surf Excel, Maggi).
-
-3. **Public Website Checksum & Download Stream Fix:**
-   - Repaired public download site (`download-app`) by replacing legacy Build 4 bundled assets with dynamically bundled Build 7 assets.
-   - Implemented real-time chunked stream reader (`ReadableStreamDefaultReader`) that provides truthful dynamic byte progress.
-   - Dynamically loads `update.json` for authoritative file size and SHA-256 checksum, eliminating hardcoded mismatch false alarms.
-   - Native WebCrypto API verification validates exact SHA-256 binary hash before saving.
-
-4. **Build 6 Account Security Hardening & Full Regression:**
-   - 5-consecutive failed PIN attempt server-enforced automatic lockout (`lock_type = 'AUTOMATIC'`).
-   - Bilingual attempt counter indicator (`Incorrect PIN. Failed attempts: X of 5.` / `चुकीचा पिन. अयशस्वी प्रयत्न: X पैकी ५.`).
-   - Zero-enumeration protection for non-existent accounts.
-   - Locked account modal with in-app reactivation requests and Owner Admin approval flow.
-   - Administrative manual locking with mandatory reason and instant session revocation.
-
-5. **Preserved Core Platform Features:**
-   - In-App APK Updater with automatic update checking and direct installer handoff.
-   - PostgreSQL primary database with Firebase Cloud Firestore backup synchronization.
-   - Marathi A4 PDF receipt generation and printing with Devanagari Unicode support.
+3. **Cryptographic Integrity & Preflight Verification:**
+   - Pre-download manifest verification enforces exact 64-character SHA-256 validation before saving to storage.
+   - Client streaming verification prevents execution of corrupt, truncated, or tampered APK binaries.
 
 ---
 
@@ -71,12 +49,21 @@ To verify the integrity of the downloaded APK:
 
 ### PowerShell (Windows):
 ```powershell
-Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.2-build9.apk
-# Expected output: 5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD
+Get-FileHash -Algorithm SHA256 .\HomeGrocery-v1.0.1-build10.apk
+# Expected output: A96F1012A78D298D1537BCBC4F8E3BD37E2B0866A9A628D026A4748003956CB8
 ```
 
 ### Linux / macOS:
 ```bash
-sha256sum HomeGrocery-v1.0.2-build9.apk
-# Expected output: 200090e78450ad7b719b0615239ff1b1493ec1900f6879b7dc26bd39a83d81d6  HomeGrocery-v1.0.2-build9.apk
+sha256sum HomeGrocery-v1.0.1-build10.apk
+# Expected output: a96f1012a78d298d1537bcbc4f8e3bd37e2b0866a9a628d026a4748003956cb8  HomeGrocery-v1.0.1-build10.apk
 ```
+
+---
+
+## Historical Releases
+
+- **Build 9 (v1.0.2, versionCode 16):** [HomeGrocery-v1.0.2-build9.apk](./HomeGrocery-v1.0.2-build9.apk) (8,854,872 bytes, SHA-256: `5027D8B180D4DC0F0CAF8931D8141088C42DECB7E57909C64503759A13B538CD`)
+- **Build 8 (v1.0.1, versionCode 15):** [HomeGrocery-v1.0.1-build8.apk](./HomeGrocery-v1.0.1-build8.apk) (9,429,395 bytes)
+- **Build 7 (v1.0.1, versionCode 14):** [HomeGrocery-v1.0.1-build7.apk](./HomeGrocery-v1.0.1-build7.apk) (9,378,245 bytes)
+- **Build 6 (v1.0.0, versionCode 13):** [HomeGrocery-v1.0.0-build6.apk](./HomeGrocery-v1.0.0-build6.apk) (8,840,048 bytes)
