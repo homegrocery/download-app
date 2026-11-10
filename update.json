@@ -5,7 +5,7 @@
   "packageId": "com.homegrocery.app",
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.github.io/download-app/HomeGrocery-v1.0.1-build10.apk",
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.1-build10.apk",
   "apkSize": 7797519,
   "sha256": "A96F1012A78D298D1537BCBC4F8E3BD37E2B0866A9A628D026A4748003956CB8",
   "releaseNotes": "Home Grocery v1.0.1 (Build 10) — Production-signed release candidate, enhanced offline database preservation, and cryptographic signature verification.",

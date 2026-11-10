@@ -2,7 +2,7 @@
 
 Official public distribution repository for Home Grocery (घरगुती किराणा यादी) - a modern, bilingual Marathi/English grocery budgeting and inventory management application.
 
-- **Live Public Website:** [https://homegrocery.github.io/download-app/](https://homegrocery.github.io/download-app/)
+- **Live Public Website:** [https://homegrocery.online/](https://homegrocery.online/)
 - **Direct APK Download (Latest):** [HomeGrocery-v1.0.1-build10.apk](./HomeGrocery-v1.0.1-build10.apk)
 - **Direct Update Manifest:** [update.json](./update.json)
 
