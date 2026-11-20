@@ -1,14 +1,14 @@
 {
-  "version": "1.0.1",
-  "versionCode": 17,
-  "build": 10,
+  "version": "1.0.2",
+  "versionCode": 25,
+  "build": 7,
   "packageId": "com.homegrocery.app",
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.1-build10.apk",
-  "apkSize": 7797519,
-  "sha256": "A96F1012A78D298D1537BCBC4F8E3BD37E2B0866A9A628D026A4748003956CB8",
-  "releaseNotes": "Home Grocery v1.0.1 (Build 10) — Production-signed release candidate, enhanced offline database preservation, and cryptographic signature verification.",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.1 (Build 10) — अधिकृत उत्पादन रिलीज, सुधारित ऑफलाइन डेटा सुरक्षितता आणि डिजिटल स्वाक्षरी पडताळणी.",
-  "publishedAt": "2026-11-04T12:31:38.889Z"
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.2-build7.apk",
+  "apkSize": 7833600,
+  "sha256": "871FC961734DFD3A2811C43CF55D1D489F08D63A230A99D60ED3515CD7FABAF2",
+  "releaseNotes": "Home Grocery v1.0.2 (Build 7) Production Release",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.2 (Build 7) अधिकृत उत्पादन रिलीज",
+  "publishedAt": "2026-11-20T22:30:00.000Z"
 }
