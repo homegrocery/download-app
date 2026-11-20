@@ -1,0 +1,32 @@
+# Home Grocery (घरगुती किराणा यादी)
+
+> Official household grocery planning, budgeting, and Devanagari A4 PDF receipt generation Android application.
+
+## Overview
+Home Grocery (घरगुती किराणा यादी) is a modern, privacy-focused Android application designed for Indian households to plan, track, and manage monthly grocery expenses. It offers 100% offline-first capability, native Devanagari Marathi script support, cryptographic security (PIN & 16-character Personal Recovery Code), and one-click A4 printable receipts.
+
+- **Official Website:** https://homegrocery.online/
+- **Current Version:** v1.0.2 (Build 7, versionCode: 25)
+- **Direct APK Download:** https://homegrocery.online/HomeGrocery-v1.0.2-build7.apk
+- **APK SHA-256 Checksum:** `871FC961734DFD3A2811C43CF55D1D489F08D63A230A99D60ED3515CD7FABAF2`
+- **File Size:** 7.47 MB (7,834,753 bytes)
+- **Supported OS:** Android 5.1 to Android 14+
+- **Developer:** Santosh Koli (संतोष कोळी)
+
+## Core Capabilities
+- **Offline-First Functionality:** Complete list management, item checkboxes, and totals work without an active internet connection.
+- **Bilingual Support:** Native Devanagari Marathi (मराठी) and English with instant toggle.
+- **Budget Tracking:** Pre-set monthly spending thresholds with visual progress tracking.
+- **Devanagari A4 PDF Engine:** Generates high-fidelity printable receipts showing item names, unit quantities, rates, and totals.
+- **Cryptographic Security:** PBKDF2 / memory-hard PIN hashing and self-service 16-character recovery codes (HG-XXXX-XXXX-XXXX).
+
+## Key Links & Resources
+- Home & Download: https://homegrocery.online/
+- Direct APK: https://homegrocery.online/HomeGrocery-v1.0.2-build7.apk
+- Features: https://homegrocery.online/#features
+- Usefulness Guide: https://homegrocery.online/#usefulness
+- Data Security & Privacy: https://homegrocery.online/#security
+- FAQ: https://homegrocery.online/#faq
+- Privacy Policy: https://homegrocery.online/privacy
+- Release Manifest: https://homegrocery.online/update.json
+- Sitemap: https://homegrocery.online/sitemap.xml
