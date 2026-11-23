@@ -1,14 +1,14 @@
 {
   "version": "1.0.2",
-  "versionCode": 26,
-  "build": 8,
+  "versionCode": 27,
+  "build": 9,
   "packageId": "com.homegrocery.app",
-  "isMandatory": false,
-  "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.2-build8.apk",
-  "apkSize": 7847321,
-  "sha256": "DB62083B776440BF9759B56E1BBE3C961BA1662288FB99DDE64A4C1E919B55A5",
-  "releaseNotes": "Home Grocery v1.0.2 (Build 8) Production Release",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.2 (Build 8) अधिकृत उत्पादन रिलीज",
-  "publishedAt": "2026-11-21T12:00:00.000Z"
+  "isMandatory": true,
+  "minSupportedBuild": 9,
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.2-build9.apk",
+  "apkSize": 8949377,
+  "sha256": "8478B9B7694C8B50992D6E4580AE1CB4D94DF36474DB70DFF74698E69FD2D2FF",
+  "releaseNotes": "Home Grocery v1.0.2 (Build 9) - Technical Support & Rebranding Release",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.2 (Build 9) - अधिकृत तांत्रिक सपोर्ट व मदत केंद्र",
+  "publishedAt": "2026-11-23T14:00:00.000Z"
 }
