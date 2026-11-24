@@ -54,3 +54,16 @@ jobs:
                 "https://homegrocery.online/llms.txt"
               ]
             }' https://api.indexnow.org/indexnow || true
+
+          curl -s -i -X POST -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "homegrocery.online",
+              "key": "175fed07c749484a8e3c341a2fa1de1e",
+              "keyLocation": "https://homegrocery.online/175fed07c749484a8e3c341a2fa1de1e.txt",
+              "urlList": [
+                "https://homegrocery.online/",
+                "https://homegrocery.online/privacy",
+                "https://homegrocery.online/sitemap.xml",
+                "https://homegrocery.online/llms.txt"
+              ]
+            }' https://www.bing.com/indexnow || true
