@@ -1,14 +1,14 @@
 {
-  "version": "1.0.2",
-  "versionCode": 28,
-  "build": 10,
+  "version": "1.0.3",
+  "versionCode": 29,
+  "build": 1,
   "packageId": "com.homegrocery.app",
   "isMandatory": true,
-  "minSupportedBuild": 10,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.2-build10.apk",
-  "apkSize": 8951584,
-  "sha256": "DA0B26611536AF77C2FA21B7605E976DB76BA579477FF1D5A44F1CEF6B34E1CC",
-  "releaseNotes": "Home Grocery v1.0.2 (Build 10) - Customer Support Chat, Ticket Management, and Mandatory Security Update",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.2 (Build 10) - ग्राहक मदत चॅट, तिकीट व्यवस्थापन आणि सक्तीचे सुरक्षा अपडेट",
-  "publishedAt": "2026-11-24T12:00:00.000Z"
+  "minSupportedBuild": 1,
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build1.apk",
+  "apkSize": 9085355,
+  "sha256": "86B394AB1A62E2B41A8C3EB3077252939697036C93283F47C4D22AE843198C98",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 1) - Single verified download workflow, Google Play Protect installation guide, and enhanced real-time customer support desk.",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 1) - एकल अधिकृत डाऊनलोड सुविधा, Google Play Protect सुरक्षित इन्स्टॉलेशन मार्गदर्शन आणि अद्ययावत ग्राहक मदत केंद्र.",
+  "publishedAt": "2026-11-24T08:30:00.000Z"
 }
