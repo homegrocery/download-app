@@ -1,14 +1,14 @@
 {
   "version": "1.0.3",
-  "versionCode": 30,
-  "build": 2,
+  "versionCode": 31,
+  "build": 3,
   "packageId": "com.homegrocery.app",
-  "isMandatory": false,
-  "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build2.apk",
-  "apkSize": 7848806,
-  "sha256": "3FC2EBD154F02224D9356B7CEFE3B580E6E12AEB5C9CFB6E6FDD0249780317F0",
-  "releaseNotes": "Home Grocery v1.0.3 (Build 2) Production Release - HelpDesk Live In-App Chat & Sync Stabilization",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 2) अधिकृत उत्पादन रिलीज - थेट ॲप मदत व सिंक सुधारणा",
-  "publishedAt": "2026-11-24T13:30:00.000Z"
+  "isMandatory": true,
+  "minSupportedBuild": 3,
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build3.apk",
+  "apkSize": 7849988,
+  "sha256": "D5F5C7963368DE0823395DE88F696B6B1A9783E8D9BDD7D58E13778A9DCF13DC",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 3) Mandatory Release - Mini-WhatsApp Support Chat, LDS Support Identity & Universal ERP Auto-Refresh",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 3) अनिवार्य रिलीज - मिनी-व्हॉट्सअ‍ॅप थेट मदत, LDS सपोर्ट ओळख व ऑटो-रिफ्रेश",
+  "publishedAt": "2026-11-24T20:30:00.000Z"
 }
