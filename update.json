@@ -1,14 +1,14 @@
 {
   "version": "1.0.3",
-  "versionCode": 31,
-  "build": 3,
+  "versionCode": 32,
+  "build": 4,
   "packageId": "com.homegrocery.app",
   "isMandatory": true,
-  "minSupportedBuild": 3,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build3.apk",
-  "apkSize": 7849988,
-  "sha256": "D5F5C7963368DE0823395DE88F696B6B1A9783E8D9BDD7D58E13778A9DCF13DC",
-  "releaseNotes": "Home Grocery v1.0.3 (Build 3) Mandatory Release - Mini-WhatsApp Support Chat, LDS Support Identity & Universal ERP Auto-Refresh",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 3) अनिवार्य रिलीज - मिनी-व्हॉट्सअ‍ॅप थेट मदत, LDS सपोर्ट ओळख व ऑटो-रिफ्रेश",
-  "publishedAt": "2026-11-24T20:30:00.000Z"
+  "minSupportedBuild": 4,
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build4.apk",
+  "apkSize": 7851279,
+  "sha256": "9FF396680784D506DF058F634A583A6BEDB6BEB941DF7ABEB5864E60F17193E8",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 4) Mandatory Release - Resolved Ticket Chat Lock, Customer Ticket Deletion & Chat Performance Enhancements",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 4) अनिवार्य रिलीज - सोडवलेल्या तक्रारींचे चॅट लॉक, ग्राहक तिकीट डिलीट (सिंगल व बल्क) आणि चॅट सुधारणा",
+  "publishedAt": "2026-11-24T22:14:00.000Z"
 }
