@@ -1,14 +1,14 @@
 {
-  "version": "1.0.2",
-  "versionCode": 26,
-  "build": 8,
+  "version": "1.0.3",
+  "versionCode": 30,
+  "build": 2,
   "packageId": "com.homegrocery.app",
   "isMandatory": false,
   "minSupportedBuild": 1,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.2-build8.apk",
-  "apkSize": 7847321,
-  "sha256": "DB62083B776440BF9759B56E1BBE3C961BA1662288FB99DDE64A4C1E919B55A5",
-  "releaseNotes": "Home Grocery v1.0.2 (Build 8) Production Release",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.2 (Build 8) अधिकृत उत्पादन रिलीज",
-  "publishedAt": "2026-11-21T12:00:00.000Z"
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build2.apk",
+  "apkSize": 7848806,
+  "sha256": "3FC2EBD154F02224D9356B7CEFE3B580E6E12AEB5C9CFB6E6FDD0249780317F0",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 2) Production Release - HelpDesk Live In-App Chat & Sync Stabilization",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 2) अधिकृत उत्पादन रिलीज - थेट ॲप मदत व सिंक सुधारणा",
+  "publishedAt": "2026-11-24T13:30:00.000Z"
 }
