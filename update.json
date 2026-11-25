@@ -1,14 +1,14 @@
 {
   "version": "1.0.3",
-  "versionCode": 32,
-  "build": 4,
+  "versionCode": 33,
+  "build": 5,
   "packageId": "com.homegrocery.app",
   "isMandatory": true,
   "minSupportedBuild": 4,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build4.apk",
-  "apkSize": 7851279,
-  "sha256": "9FF396680784D506DF058F634A583A6BEDB6BEB941DF7ABEB5864E60F17193E8",
-  "releaseNotes": "Home Grocery v1.0.3 (Build 4) Mandatory Release - Resolved Ticket Chat Lock, Customer Ticket Deletion & Chat Performance Enhancements",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 4) अनिवार्य रिलीज - सोडवलेल्या तक्रारींचे चॅट लॉक, ग्राहक तिकीट डिलीट (सिंगल व बल्क) आणि चॅट सुधारणा",
-  "publishedAt": "2026-11-24T22:14:00.000Z"
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build5.apk",
+  "apkSize": 7855609,
+  "sha256": "A47BD907B41A2950B1136E4A6707C5C1DA0A7D617FDE67200AC14ADBA2EFCF93",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 5) Production Release - Enhanced Live Telemetry, Error Logging, and Stability Improvements",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत उत्पादन आवृत्ती - वर्धित थेट टेलीमेट्री आणि कार्यक्षमता सुधारणा",
+  "publishedAt": "2026-11-25T17:15:00.000Z"
 }
