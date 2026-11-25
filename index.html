@@ -131,13 +131,11 @@
             <span data-i18n="navCta">APK मिळवा</span>
           </a>
 
-          <!-- Mobile Hamburger Menu Button -->
+          <!-- Mobile Hamburger 3-Bar Button -->
           <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+            <span class="bar-line"></span>
+            <span class="bar-line"></span>
+            <span class="bar-line"></span>
           </button>
         </div>
       </div>
@@ -654,6 +652,13 @@
       </section>
     </main>
 
+    <!-- Mobile Bottom 3-Bar Floating Navigation Dock (Vivo & Mobile Perspective) -->
+    <nav class="mobile-bottom-bar" aria-label="Mobile Quick Navigation">
+      <a href="#hero" data-i18n="mobNavHome">🏠 मुख्य</a>
+      <a href="#features" data-i18n="mobNavFeat">⚡ वैशिष्ट्ये</a>
+      <a href="#download" class="active-cta" data-i18n="mobNavDl">📲 डाऊनलोड APK</a>
+    </nav>
+
     <!-- 7. UNIFIED AURAMAIL FOOTER -->
     <footer class="site-footer" role="contentinfo">
       <div class="container">
@@ -666,9 +671,6 @@
             <p class="footer-desc" data-i18n="footerDesc">
               महाराष्ट्रातील कुटुंबांसाठी बनवलेली अधिकृत व विश्वासार्ह किराणा आणि बजेट व्यवस्थापन प्रणाली.
             </p>
-            <div style="font-size: 0.82rem; color: #64748b;">
-              Official Gateway: <code>homegrocery.online</code>
-            </div>
           </div>
 
           <div>
@@ -685,25 +687,22 @@
             <h4 class="footer-col-title" data-i18n="footerCol2">सुरक्षा व कायदेशीर</h4>
             <ul class="footer-links">
               <li><a href="./privacy" data-i18n="navPrivacy">गोपनीयता धोरण</a></li>
-              <li><a href="./update.json" target="_blank" rel="noopener">Update Manifest (JSON)</a></li>
               <li><a href="./sitemap.xml" target="_blank" rel="noopener">Sitemap (XML)</a></li>
               <li><a href="./robots.txt" target="_blank" rel="noopener">Robots (TXT)</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-col-title" data-i18n="footerCol3">विकसक</h4>
+            <h4 class="footer-col-title" data-i18n="footerCol3">सपोर्ट व संपर्क</h4>
             <ul class="footer-links">
               <li style="color: #cbd5e1; font-weight: 600;" data-i18n="footerDev">संतोष कोळी (Santosh Koli)</li>
-              <li><a href="https://github.com/homegrocery/download-app" target="_blank" rel="noopener">GitHub Repository</a></li>
-              <li><span style="color: #94a3b8; font-size: 0.85rem;">सपोर्ट: kiritokun5796@gmail.com</span></li>
+              <li><a href="mailto:homegrocery.security@gmail.com" style="color: var(--accent-cyan-light); word-break: break-all;">homegrocery.security@gmail.com</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
           <p>© 2026 Home Grocery (घरगुती किराणा यादी). Developed by Santosh Koli. <span data-i18n="footerRights">सर्व हक्क राखीव.</span></p>
-          <p>Production Baseline: v1.0.3 • Build 5 • versionCode 33</p>
         </div>
       </div>
     </footer>

@@ -35,6 +35,9 @@
       navFaq: 'प्रश्नोत्तरे',
       navPrivacy: 'गोपनीयता धोरण',
       navCta: 'APK मिळवा',
+      mobNavHome: '🏠 मुख्य',
+      mobNavFeat: '⚡ वैशिष्ट्ये',
+      mobNavDl: '📲 डाऊनलोड APK',
 
       // Hero
       heroPill: '१००% मोफत • सुरक्षित • कोणतीही जाहिरात नाही',
@@ -143,6 +146,9 @@
       navFaq: 'FAQ',
       navPrivacy: 'Privacy Policy',
       navCta: 'Get APK',
+      mobNavHome: '🏠 Home',
+      mobNavFeat: '⚡ Features',
+      mobNavDl: '📲 Download APK',
 
       // Hero
       heroPill: '100% Free • Private • Zero Ads',

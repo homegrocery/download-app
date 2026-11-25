@@ -423,14 +423,79 @@ body {
   transform: translateY(0);
 }
 
+/* Mobile Hamburger 3-Bar Button */
 .mobile-menu-btn {
   display: none;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-subtle);
   color: var(--text-white);
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: var(--radius-sm);
   cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 42px;
+  height: 40px;
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:active {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-cyan);
+}
+
+.mobile-menu-btn .bar-line {
+  display: block;
+  width: 20px;
+  height: 2.5px;
+  background: var(--text-white);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Mobile Bottom 3-Bar Floating Navigation Dock (Vivo & Mobile Perspective) */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(0);
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(6, 182, 212, 0.2);
+  border-radius: var(--radius-full);
+  padding: 6px 10px;
+  z-index: 999;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-bottom-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.mobile-bottom-bar a:hover,
+.mobile-bottom-bar a:active {
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-bottom-bar a.active-cta {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: var(--text-white);
+  box-shadow: 0 2px 10px rgba(6, 182, 212, 0.4);
 }
 
 .gradient-text-aura {
@@ -1271,14 +1336,51 @@ body {
 }
 
 @media (max-width: 900px) {
+  /* Hardware Acceleration & Fast Touch for Vivo and Android Phones */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Disable heavy multi-layer blur filters on mobile GPUs (prevents scroll lag) */
+  .aura-glow-primary,
+  .aura-glow-secondary,
+  .aura-glow-tertiary {
+    display: none !important;
+  }
+  
+  /* Smooth, GPU-friendly single radial gradient for mobile */
+  body {
+    background: radial-gradient(circle at 50% 0%, #101c38 0%, #070b14 65%) !important;
+    padding-bottom: 72px; /* clearance for mobile bottom 3-bar dock */
+  }
+
+  /* Replace GPU-taxing backdrop blur with solid high-performance dark backgrounds */
+  .site-nav,
+  .bento-card,
+  .stat-card,
+  .step-card,
+  .faq-item,
+  .download-hub-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #0d1527 !important;
+    transform: translateZ(0);
+    contain: content;
+  }
+
+  /* Show floating mobile 3-bar dock */
+  .mobile-bottom-bar {
+    display: flex;
+  }
+
   .nav-links, .nav-actions .shimmer-btn {
     display: none;
   }
   .mobile-menu-btn {
-    display: block;
+    display: flex;
   }
   .hero-section {
-    padding: 40px 0 30px 0;
+    padding: 36px 0 24px 0;
   }
   .hero-title {
     font-size: 2.1rem;
