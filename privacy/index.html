@@ -2,225 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/brand/home-grocery-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/png" href="../brand/home-grocery-logo.png" />
+    <link rel="icon" type="image/svg+xml" href="../grocery-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="theme-color" content="#070b14" />
     <title>Privacy Policy | Home Grocery (घरगुती किराणा यादी)</title>
-    <meta name="description" content="Official Privacy Policy and Google OAuth Data Practices for Home Grocery and Home Grocery Encrypted Backup System." />
+    <meta name="description" content="Official Privacy Policy, Data Protection, and Google OAuth Compliance Practices for Home Grocery and Home Grocery Encrypted Backup System." />
     <link rel="canonical" href="https://homegrocery.online/privacy" />
 
-    <!-- Preconnect & Load Noto Sans Devanagari & Inter fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Shared AuraMail Theme Stylesheet -->
+    <link rel="stylesheet" href="../assets/auramail.css" />
 
     <style>
-      :root {
-        --bg-main: #0b1120;
-        --bg-card: #131d31;
-        --bg-card-border: #1e293b;
-        --text-primary: #f8fafc;
-        --text-secondary: #94a3b8;
-        --text-muted: #64748b;
-        --accent-cyan: #06b6d4;
-        --accent-cyan-glow: rgba(6, 182, 212, 0.15);
-        --accent-emerald: #10b981;
-        --accent-blue: #3b82f6;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: var(--bg-main);
-        color: var(--text-primary);
-        line-height: 1.65;
-        -webkit-font-smoothing: antialiased;
-        padding-bottom: 60px;
-      }
-
-      /* Cyber background grid */
-      .bg-grid {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: 
-          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 32px 32px;
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      .container {
+      .policy-wrapper {
         max-width: 900px;
-        margin: 0 auto;
-        padding: 24px 20px;
-        position: relative;
-        z-index: 1;
+        margin: 40px auto 80px auto;
       }
-
-      /* Navigation header */
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 0 32px 0;
-        border-bottom: 1px solid var(--bg-card-border);
-        margin-bottom: 32px;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .brand img {
-        width: 38px;
-        height: 38px;
-        border-radius: 10px;
-      }
-
-      .brand-title {
-        font-size: 1.15rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        color: #fff;
-      }
-
-      .brand-sub {
-        font-size: 0.75rem;
-        color: var(--accent-cyan);
-        font-weight: 500;
-      }
-
-      .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--text-secondary);
-        text-decoration: none;
-        padding: 8px 14px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--bg-card-border);
-        border-radius: 8px;
-        transition: all 0.2s ease;
-      }
-
-      .back-link:hover {
-        color: #fff;
-        background: rgba(6, 182, 212, 0.1);
-        border-color: var(--accent-cyan);
-      }
-
-      /* Policy hero banner */
-      .hero {
+      .policy-header {
         margin-bottom: 40px;
+        text-align: center;
       }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 4px 10px;
-        background: rgba(16, 185, 129, 0.12);
-        border: 1px solid rgba(16, 185, 129, 0.3);
-        border-radius: 999px;
-        color: #34d399;
-        font-size: 0.75rem;
-        font-weight: 600;
-        margin-bottom: 14px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-        font-weight: 800;
-        color: #ffffff;
-        letter-spacing: -0.03em;
-        margin-bottom: 10px;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-        color: var(--text-secondary);
-        margin-bottom: 12px;
-      }
-
-      .effective-date {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-      }
-
-      /* Section card styling */
       .policy-card {
         background: var(--bg-card);
-        border: 1px solid var(--bg-card-border);
-        border-radius: 14px;
-        padding: 28px;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-xl);
+        padding: 32px;
         margin-bottom: 24px;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-fast);
       }
-
+      .policy-card:hover {
+        border-color: rgba(6, 182, 212, 0.3);
+      }
       .policy-card h2 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         font-weight: 700;
-        color: #fff;
+        color: var(--text-white);
         margin-bottom: 16px;
         display: flex;
         align-items: center;
-        gap: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        padding-bottom: 10px;
+        gap: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 12px;
       }
-
-      .policy-card h2 span.num {
+      .policy-card h2 .num {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: rgba(6, 182, 212, 0.15);
-        color: var(--accent-cyan);
-        border-radius: 6px;
-        font-size: 0.8rem;
-        font-weight: 700;
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+        color: var(--text-white);
+        border-radius: var(--radius-sm);
+        font-size: 0.85rem;
+        font-weight: 800;
       }
-
       .policy-card p {
-        font-size: 0.95rem;
+        font-size: 0.96rem;
         color: var(--text-secondary);
         margin-bottom: 14px;
+        line-height: 1.68;
       }
-
-      .policy-card p:last-child {
-        margin-bottom: 0;
-      }
-
       .policy-card ul {
         list-style: none;
         padding-left: 0;
         margin: 14px 0;
       }
-
       .policy-card li {
-        font-size: 0.92rem;
+        font-size: 0.94rem;
         color: var(--text-secondary);
-        padding-left: 24px;
+        padding-left: 26px;
         position: relative;
         margin-bottom: 10px;
+        line-height: 1.6;
       }
-
       .policy-card li::before {
         content: "✓";
         position: absolute;
@@ -228,224 +90,264 @@
         color: var(--accent-cyan);
         font-weight: 700;
       }
-
       .highlight-box {
-        background: rgba(6, 182, 212, 0.06);
-        border: 1px solid rgba(6, 182, 212, 0.25);
-        border-radius: 10px;
-        padding: 16px 18px;
-        margin: 16px 0;
+        background: rgba(6, 182, 212, 0.08);
+        border: 1px solid rgba(6, 182, 212, 0.28);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        margin: 18px 0;
       }
-
       .highlight-box p {
-        color: #e2e8f0;
-        font-size: 0.9rem;
+        color: #f1f5f9;
+        font-size: 0.92rem;
+        margin-bottom: 0;
       }
-
       .highlight-box strong {
-        color: var(--accent-cyan);
+        color: var(--accent-cyan-light);
       }
-
       .marathi-note {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
         color: #94a3b8;
         font-family: 'Noto Sans Devanagari', sans-serif;
         background: rgba(255, 255, 255, 0.03);
         border-left: 3px solid var(--accent-blue);
-        padding: 10px 14px;
-        margin-top: 12px;
-        border-radius: 0 6px 6px 0;
-      }
-
-      /* Footer */
-      footer {
-        margin-top: 48px;
-        padding-top: 24px;
-        border-top: 1px solid var(--bg-card-border);
-        text-align: center;
-        font-size: 0.82rem;
-        color: var(--text-muted);
-      }
-
-      footer a {
-        color: var(--accent-cyan);
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 640px) {
-        h1 { font-size: 1.7rem; }
-        .policy-card { padding: 20px 16px; }
-        .brand-title { font-size: 1.05rem; }
+        padding: 12px 16px;
+        margin-top: 14px;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        line-height: 1.6;
       }
     </style>
   </head>
   <body>
-    <div class="bg-grid"></div>
-
-    <div class="container">
-      <!-- Top Navigation -->
-      <header>
-        <a href="/" class="brand">
-          <img src="/brand/home-grocery-logo.png" alt="Home Grocery Logo" />
-          <div>
-            <div class="brand-title">Home Grocery</div>
-            <div class="brand-sub">घरगुती किराणा यादी • Official</div>
-          </div>
-        </a>
-        <a href="/" class="back-link">
-          ← Return to Home
-        </a>
-      </header>
-
-      <!-- Hero Header -->
-      <section class="hero">
-        <div class="badge">
-          🛡️ Verified Data Protection & Google OAuth Compliance
-        </div>
-        <h1>Privacy Policy</h1>
-        <p class="subtitle">
-          How Home Grocery and the Home Grocery Encrypted Backup Adapter collect, process, encrypt, and protect your data.
-        </p>
-        <div class="effective-date">
-          <strong>Effective Date:</strong> November 17, 2026 &bull; <strong>Canonical URL:</strong> https://homegrocery.online/privacy
-        </div>
-      </section>
-
-      <!-- 1. Purpose of Home Grocery & Backup System -->
-      <article class="policy-card">
-        <h2><span class="num">1</span> Application Purpose & Scope</h2>
-        <p>
-          <strong>Home Grocery (घरगुती किराणा यादी)</strong> is an offline-first household grocery planning, budgeting, and monthly expense management application developed for families. It provides digital grocery checklists, estimated cost calculators, Devanagari localization (मराठी), and A4 printable receipts.
-        </p>
-        <p>
-          The <strong>Home Grocery Backup Adapter</strong> is an administrative disaster recovery subsystem designed solely to create encrypted, offsite database archives of household grocery records to safeguard against hardware failure, data loss, or server decommissioning.
-        </p>
-        <div class="marathi-note">
-          <strong>मराठी सारांश:</strong> होम ग्रोसरी हे कुटुंबासाठी किराणा नियोजन व बजेट व्यवस्थापन ॲप्लिकेशन आहे. डेटा नष्ट होऊ नये म्हणून हे ॲप खाजगी व कूटबद्ध (encrypted) बॅकअप सुविधा पुरवते.
-        </div>
-      </article>
-
-      <!-- 2. Google OAuth Authentication & Permissions -->
-      <article class="policy-card">
-        <h2><span class="num">2</span> Google OAuth Authentication & Limited Scope</h2>
-        <p>
-          When the administrator enables cloud backup synchronization, the application connects to Google APIs using standard <strong>OAuth 2.0 Desktop Loopback Flow (RFC 8252)</strong>.
-        </p>
-        
-        <div class="highlight-box">
-          <p>
-            <strong>Requested Scope:</strong> <code>https://www.googleapis.com/auth/drive.file</code><br />
-            <strong>Classification:</strong> Non-Sensitive / Per-File Permission<br />
-            <strong>Access Level:</strong> Strictly restricted to files and folders created directly by the Home Grocery application.
-          </p>
-        </div>
-
-        <p><strong>What the application CANNOT do:</strong></p>
-        <ul>
-          <li>The application <strong>CANNOT</strong> access, view, list, read, or modify your personal files, Google Docs, Sheets, photos, or existing folders in Google Drive.</li>
-          <li>The application <strong>CANNOT</strong> access files created by other apps or services.</li>
-          <li>The application <strong>CANNOT</strong> read your personal emails, calendar, contacts, or device identity.</li>
-          <li>The application <strong>CANNOT</strong> share or publish your Google Drive data to any third party.</li>
-        </ul>
-
-        <p><strong>What the application CAN do:</strong></p>
-        <ul>
-          <li>Create a single designated private folder named <code>HomeGrocery_Backups</code> in your own personal Google Drive.</li>
-          <li>Upload client-side encrypted backup archives and cryptographic verification manifests to this dedicated folder.</li>
-          <li>Download previously created backup archives for disaster recovery verification and restoration drills.</li>
-          <li>Prune older backup generations under a strict two-generation retention policy to conserve your personal Drive storage quota.</li>
-        </ul>
-
-        <div class="marathi-note">
-          <strong>गुगल ड्राइव्ह परवानगी:</strong> ॲप केवळ स्वतः तयार केलेल्या बॅकअप फाइल्सपुरतीच मर्यादा ठेवते (`drive.file`). तुमच्या वैयक्तिक गुगल फाइल्स किंवा फोटोंना ॲप कधीही हात लावत नाही.
-        </div>
-      </article>
-
-      <!-- 3. Client-Side AES-256-GCM Encryption Before Upload -->
-      <article class="policy-card">
-        <h2><span class="num">3</span> Client-Side Cryptographic Protection</h2>
-        <p>
-          Home Grocery operates under a <strong>Zero-Knowledge Cloud Architecture</strong>. All database records are packaged and encrypted locally <em>before</em> any network transmission takes place.
-        </p>
-        <ul>
-          <li><strong>PostgreSQL Native Extraction:</strong> Logical backups are generated using PostgreSQL binary custom format (<code>pg_dump -Fc</code>).</li>
-          <li><strong>Authenticated Encryption:</strong> Archives are encrypted using <strong>AES-256-GCM</strong> (Galois/Counter Mode), providing both confidentiality and cryptographic tamper-detection.</li>
-          <li><strong>Key Derivation:</strong> Cryptographic keys are derived using <strong>PBKDF2</strong> with <strong>100,000 rounds of SHA-512</strong> and cryptographically secure 16-byte random salts.</li>
-          <li><strong>Unique Initialization Vectors:</strong> Every backup file generates a fresh 12-byte random IV.</li>
-          <li><strong>No Plaintext Transmissions:</strong> Plaintext SQL dumps are <strong>never</strong> uploaded to Google Drive or any remote server.</li>
-          <li><strong>No Keys in Manifest:</strong> Cryptographic manifest files (<code>.json</code>) store only file sizes and SHA-256 hashes for verification; they never contain encryption passwords, tokens, or credentials.</li>
-        </ul>
-      </article>
-
-      <!-- 4. Credential Protection & Token Storage -->
-      <article class="policy-card">
-        <h2><span class="num">4</span> OAuth Credential & Token Protection</h2>
-        <p>
-          Security of authorization tokens and credentials is strictly enforced through local physical isolation:
-        </p>
-        <ul>
-          <li><strong>No Cloud Token Storage:</strong> Google OAuth refresh tokens and Client Secrets are stored exclusively in local, restricted configuration files (<code>.env.drive-backup</code> and <code>drive-token.json</code>) on the administrator's local machine.</li>
-          <li><strong>Git Exclusions:</strong> All token files, keys, and OAuth client JSONs are rigorously excluded from git tracking via <code>.gitignore</code> rules.</li>
-          <li><strong>No Public Exposure:</strong> Tokens and secrets are never embedded in frontend code, public static assets, or browser bundles.</li>
-          <li><strong>Revocation at Any Time:</strong> The user can immediately revoke the app's authorization at any time via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">Google Account Security &rarr; Third-party apps with account access</a>.</li>
-        </ul>
-      </article>
-
-      <!-- 5. Backup Retention & Deletion Practices -->
-      <article class="policy-card">
-        <h2><span class="num">5</span> Retention & Deletion Policy</h2>
-        <p>
-          To ensure reliable disaster recovery without consuming your Google Drive storage allowance, Home Grocery enforces a conservative <strong>Two-Generation Retention Policy</strong>:
-        </p>
-        <ul>
-          <li>The system retains the <strong>Latest Verified Backup</strong> and the <strong>Previous Verified Backup</strong>.</li>
-          <li>Older backups are pruned <em>only after</em> a newly uploaded archive has completed round-trip download and bit-for-bit SHA-256 decryption verification.</li>
-          <li>Because archives are compressed with zlib and encrypted with AES-256-GCM (~1.4 MB each), total storage consumption is typically less than <strong>5 MB</strong> (&lt;0.03% of Google Drive's 15 GB free allowance).</li>
-        </ul>
-      </article>
-
-      <!-- 6. User Data & Account Privacy -->
-      <article class="policy-card">
-        <h2><span class="num">6</span> General User Data Handling</h2>
-        <ul>
-          <li><strong>Zero Advertisements & Trackers:</strong> Home Grocery does not integrate third-party advertising SDKs, tracking pixels, or marketing brokers.</li>
-          <li><strong>No Sale of Personal Data:</strong> We do not sell, rent, monetize, or trade any personal information, shopping lists, or household budget data.</li>
-          <li><strong>PIN Security:</strong> User authentication PINs are hashed using salted <code>scrypt</code> cryptographic algorithms with memory-hard cost factors; plaintext PINs are never stored or logged.</li>
-          <li><strong>Local Offline Persistence:</strong> In mobile and desktop client applications, grocery data is cached in local SQLite / IndexedDB storage to allow full offline usability.</li>
-        </ul>
-      </article>
-
-      <!-- 7. Contact Information -->
-      <article class="policy-card">
-        <h2><span class="num">7</span> Developer & Contact Information</h2>
-        <p>
-          If you have questions regarding this Privacy Policy, data protection practices, or the Google OAuth integration, please contact the developer:
-        </p>
-        <div class="highlight-box">
-          <p>
-            <strong>Developer:</strong> Santosh Koli<br />
-            <strong>Project:</strong> Home Grocery / Home Grocery Backup<br />
-            <strong>Contact Email:</strong> <a href="mailto:homegrocery.security@gmail.com" style="color: var(--accent-cyan); text-decoration: none;">homegrocery.security@gmail.com</a><br />
-            <strong>Official Website:</strong> <a href="https://homegrocery.online/" style="color: var(--accent-cyan); text-decoration: none;">https://homegrocery.online/</a>
-          </p>
-        </div>
-      </article>
-
-      <!-- Footer -->
-      <footer>
-        <p>&copy; 2026 Home Grocery (घरगुती किराणा यादी). Developed by Santosh Koli. All rights reserved.</p>
-        <p style="margin-top: 8px;">
-          <a href="/">Home</a> &bull; 
-          <a href="/#features">Features</a> &bull; 
-          <a href="/#download">Download</a> &bull; 
-          <a href="/#faq">FAQ</a> &bull; 
-          <a href="/privacy">Privacy Policy</a>
-        </p>
-      </footer>
+    <!-- Background Cosmic Aura Mesh -->
+    <div class="aura-bg-container" aria-hidden="true">
+      <div class="aura-glow-primary"></div>
+      <div class="aura-glow-secondary"></div>
+      <div class="aura-glow-tertiary"></div>
+      <div class="aura-grid-texture"></div>
     </div>
+
+    <!-- Sticky Glass Navbar -->
+    <header class="site-nav" role="banner">
+      <div class="container">
+        <a href="/" class="nav-brand" aria-label="Home Grocery Home">
+          <div class="brand-icon-wrapper">
+            <img src="../brand/home-grocery-logo.png" alt="Home Grocery Logo" width="42" height="42" />
+          </div>
+          <span>Home Grocery</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation">
+          <a href="/#features">Features</a>
+          <a href="/#workflow">How It Works</a>
+          <a href="/#download">Download</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/privacy" style="color: var(--text-white); font-weight: 600;">Privacy Policy</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="/" class="btn-glass" style="padding: 8px 16px; font-size: 0.88rem;">
+            ← Return to Home
+          </a>
+          <a href="/#download" class="shimmer-btn" style="padding: 8px 18px; font-size: 0.88rem;">
+            Get APK
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <div class="policy-wrapper">
+        <!-- Hero Header -->
+        <div class="policy-header">
+          <div class="section-pill">
+            🛡️ Verified Data Protection & Google OAuth Compliance
+          </div>
+          <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px;">
+            Privacy Policy
+          </h1>
+          <p class="hero-subtitle" style="font-size: 1.05rem; margin-bottom: 12px;">
+            How Home Grocery and the Home Grocery Encrypted Backup Adapter collect, process, encrypt, and protect your data.
+          </p>
+          <div style="font-size: 0.84rem; color: var(--text-dim);">
+            <strong>Effective Date:</strong> November 17, 2026 &bull; <strong>Canonical:</strong> <code>https://homegrocery.online/privacy</code>
+          </div>
+        </div>
+
+        <!-- 1. Purpose of Home Grocery & Backup System -->
+        <article class="policy-card">
+          <h2><span class="num">1</span> Application Purpose & Scope</h2>
+          <p>
+            <strong>Home Grocery (घरगुती किराणा यादी)</strong> is an offline-first household grocery planning, budgeting, and monthly expense management application developed for families. It provides digital grocery checklists, estimated cost calculators, Devanagari localization (मराठी), and A4 printable receipts.
+          </p>
+          <p>
+            The <strong>Home Grocery Backup Adapter</strong> is an administrative disaster recovery subsystem designed solely to create encrypted, offsite database archives of household grocery records to safeguard against hardware failure, data loss, or server decommissioning.
+          </p>
+          <div class="marathi-note">
+            <strong>मराठी सारांश:</strong> होम ग्रोसरी हे कुटुंबासाठी किराणा नियोजन व बजेट व्यवस्थापन ॲप्लिकेशन आहे. डेटा नष्ट होऊ नये म्हणून हे ॲप खाजगी व कूटबद्ध (encrypted) बॅकअप सुविधा पुरवते.
+          </div>
+        </article>
+
+        <!-- 2. Google OAuth Authentication & Permissions -->
+        <article class="policy-card">
+          <h2><span class="num">2</span> Google OAuth Authentication & Limited Scope</h2>
+          <p>
+            When the administrator enables cloud backup synchronization, the application connects to Google APIs using standard <strong>OAuth 2.0 Desktop Loopback Flow (RFC 8252)</strong>.
+          </p>
+          
+          <div class="highlight-box">
+            <p>
+              <strong>Requested Scope:</strong> <code>https://www.googleapis.com/auth/drive.file</code><br />
+              <strong>Classification:</strong> Non-Sensitive / Per-File Permission<br />
+              <strong>Access Level:</strong> Strictly restricted to files and folders created directly by the Home Grocery application.
+            </p>
+          </div>
+
+          <p><strong>What the application CANNOT do:</strong></p>
+          <ul>
+            <li>The application <strong>CANNOT</strong> access, view, list, read, or modify your personal files, Google Docs, Sheets, photos, or existing folders in Google Drive.</li>
+            <li>The application <strong>CANNOT</strong> access files created by other apps or services.</li>
+            <li>The application <strong>CANNOT</strong> read your personal emails, calendar, contacts, or device identity.</li>
+            <li>The application <strong>CANNOT</strong> share or publish your Google Drive data to any third party.</li>
+          </ul>
+
+          <p><strong>What the application CAN do:</strong></p>
+          <ul>
+            <li>Create a single designated private folder named <code>HomeGrocery_Backups</code> in your own personal Google Drive.</li>
+            <li>Upload client-side encrypted backup archives and cryptographic verification manifests to this dedicated folder.</li>
+            <li>Download previously created backup archives for disaster recovery verification and restoration drills.</li>
+            <li>Prune older backup generations under a strict two-generation retention policy to conserve your personal Drive storage quota.</li>
+          </ul>
+
+          <div class="marathi-note">
+            <strong>गुगल ड्राइव्ह परवानगी:</strong> ॲप केवळ स्वतः तयार केलेल्या बॅकअप फाइल्सपुरतीच मर्यादा ठेवते (<code>drive.file</code>). तुमच्या वैयक्तिक गुगल फाइल्स किंवा फोटोंना ॲप कधीही हात लावत नाही.
+          </div>
+        </article>
+
+        <!-- 3. Client-Side AES-256-GCM Encryption Before Upload -->
+        <article class="policy-card">
+          <h2><span class="num">3</span> Client-Side Cryptographic Protection</h2>
+          <p>
+            Home Grocery operates under a <strong>Zero-Knowledge Cloud Architecture</strong>. All database records are packaged and encrypted locally <em>before</em> any network transmission takes place.
+          </p>
+          <ul>
+            <li><strong>PostgreSQL Native Extraction:</strong> Logical backups are generated using PostgreSQL binary custom format (<code>pg_dump -Fc</code>).</li>
+            <li><strong>Authenticated Encryption:</strong> Archives are encrypted using <strong>AES-256-GCM</strong> (Galois/Counter Mode), providing both confidentiality and cryptographic tamper-detection.</li>
+            <li><strong>Key Derivation:</strong> Cryptographic keys are derived using <strong>PBKDF2</strong> with <strong>100,000 rounds of SHA-512</strong> and cryptographically secure 16-byte random salts.</li>
+            <li><strong>Unique Initialization Vectors:</strong> Every backup file generates a fresh 12-byte random IV.</li>
+            <li><strong>No Plaintext Transmissions:</strong> Plaintext SQL dumps are <strong>never</strong> uploaded to Google Drive or any remote server.</li>
+            <li><strong>No Keys in Manifest:</strong> Cryptographic manifest files (<code>.json</code>) store only file sizes and SHA-256 hashes for verification; they never contain encryption passwords, tokens, or credentials.</li>
+          </ul>
+        </article>
+
+        <!-- 4. Credential Protection & Token Storage -->
+        <article class="policy-card">
+          <h2><span class="num">4</span> OAuth Credential & Token Protection</h2>
+          <p>
+            Security of authorization tokens and credentials is strictly enforced through local physical isolation:
+          </p>
+          <ul>
+            <li><strong>No Cloud Token Storage:</strong> Google OAuth refresh tokens and Client Secrets are stored exclusively in local, restricted configuration files (<code>.env.drive-backup</code> and <code>drive-token.json</code>) on the administrator's local machine.</li>
+            <li><strong>Git Exclusions:</strong> All token files, keys, and OAuth client JSONs are rigorously excluded from git tracking via <code>.gitignore</code> rules.</li>
+            <li><strong>No Public Exposure:</strong> Tokens and secrets are never embedded in frontend code, public static assets, or browser bundles.</li>
+            <li><strong>Revocation at Any Time:</strong> The user can immediately revoke the app's authorization at any time via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">Google Account Security &rarr; Third-party apps with account access</a>.</li>
+          </ul>
+        </article>
+
+        <!-- 5. Backup Retention & Deletion Practices -->
+        <article class="policy-card">
+          <h2><span class="num">5</span> Retention & Deletion Policy</h2>
+          <p>
+            To ensure reliable disaster recovery without consuming your Google Drive storage allowance, Home Grocery enforces a conservative <strong>Two-Generation Retention Policy</strong>:
+          </p>
+          <ul>
+            <li>The system retains the <strong>Latest Verified Backup</strong> and the <strong>Previous Verified Backup</strong>.</li>
+            <li>Older backups are pruned <em>only after</em> a newly uploaded archive has completed round-trip download and bit-for-bit SHA-256 decryption verification.</li>
+            <li>Because archives are compressed with zlib and encrypted with AES-256-GCM (~1.4 MB each), total storage consumption is typically less than <strong>5 MB</strong> (&lt;0.03% of Google Drive's 15 GB free allowance).</li>
+          </ul>
+        </article>
+
+        <!-- 6. User Data & Account Privacy -->
+        <article class="policy-card">
+          <h2><span class="num">6</span> General User Data Handling</h2>
+          <ul>
+            <li><strong>Zero Advertisements & Trackers:</strong> Home Grocery does not integrate third-party advertising SDKs, tracking pixels, or marketing brokers.</li>
+            <li><strong>No Sale of Personal Data:</strong> We do not sell, rent, monetize, or trade any personal information, shopping lists, or household budget data.</li>
+            <li><strong>PIN Security:</strong> User authentication PINs are hashed using salted <code>scrypt</code> cryptographic algorithms with memory-hard cost factors; plaintext PINs are never stored or logged.</li>
+            <li><strong>Local Offline Persistence:</strong> In mobile and desktop client applications, grocery data is cached in local SQLite / IndexedDB storage to allow full offline usability.</li>
+          </ul>
+        </article>
+
+        <!-- 7. Contact Information -->
+        <article class="policy-card">
+          <h2><span class="num">7</span> Developer & Contact Information</h2>
+          <p>
+            If you have questions regarding this Privacy Policy, data protection practices, or the Google OAuth integration, please contact the developer:
+          </p>
+          <div class="highlight-box">
+            <p>
+              <strong>Developer:</strong> Santosh Koli<br />
+              <strong>Project:</strong> Home Grocery / Home Grocery Backup<br />
+              <strong>Contact:</strong> <span style="color: var(--accent-cyan-light);">homegrocery.security@gmail.com</span><br />
+              <strong>Official Website:</strong> <a href="https://homegrocery.online/" style="color: var(--accent-cyan-light); text-decoration: underline;">https://homegrocery.online/</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Unified AuraMail Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <a href="/" class="footer-logo-title">
+              <img src="../brand/home-grocery-logo.png" alt="Home Grocery Logo" width="32" height="32" style="border-radius: 6px;" />
+              <span>Home Grocery</span>
+            </a>
+            <p class="footer-desc">
+              The official and trusted household grocery list and budget management app for families.
+            </p>
+            <div style="font-size: 0.82rem; color: #64748b;">
+              Official Gateway: <code>homegrocery.online</code>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Product</h4>
+            <ul class="footer-links">
+              <li><a href="/#features">Features</a></li>
+              <li><a href="/#workflow">How It Works</a></li>
+              <li><a href="/#download">Download</a></li>
+              <li><a href="/#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Security & Legal</h4>
+            <ul class="footer-links">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/update.json" target="_blank" rel="noopener">Update Manifest (JSON)</a></li>
+              <li><a href="/sitemap.xml" target="_blank" rel="noopener">Sitemap (XML)</a></li>
+              <li><a href="/robots.txt" target="_blank" rel="noopener">Robots (TXT)</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Author</h4>
+            <ul class="footer-links">
+              <li style="color: #cbd5e1; font-weight: 600;">Santosh Koli</li>
+              <li><a href="https://github.com/homegrocery/download-app" target="_blank" rel="noopener">GitHub Repository</a></li>
+              <li><span style="color: #94a3b8; font-size: 0.85rem;">Support: kiritokun5796@gmail.com</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Home Grocery (घरगुती किराणा यादी). Developed by Santosh Koli. All rights reserved.</p>
+          <p>Production Baseline: v1.0.3 • Build 5 • versionCode 33</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
