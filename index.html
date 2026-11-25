@@ -90,10 +90,46 @@
       <div class="aura-grid-texture"></div>
     </div>
 
-    <!-- Announcement Bar -->
+    <!-- Announcement Bar (Animated Continuous Marquee Style) -->
     <div class="announcement-bar" role="region" aria-label="Announcement">
-      <span class="announcement-badge" data-i18n="announcementBadge">नवीन अपडेट</span>
-      <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
+      <div class="announcement-badge-fixed">
+        <span class="pulse-dot"></span>
+        <span data-i18n="announcementBadge">ताज्या घडामोडी</span>
+      </div>
+      <div class="announcement-track-wrapper">
+        <div class="announcement-fade-left"></div>
+        <div class="announcement-fade-right"></div>
+        <div class="announcement-marquee-track">
+          <!-- Item 1 -->
+          <div class="marquee-item">
+            <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
+            <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
+            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <span class="marquee-star">✦</span>
+          </div>
+          <!-- Item 2 (Replicated for infinite seamless marquee loop) -->
+          <div class="marquee-item">
+            <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
+            <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
+            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <span class="marquee-star">✦</span>
+          </div>
+          <!-- Item 3 (Replicated) -->
+          <div class="marquee-item">
+            <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
+            <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
+            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <span class="marquee-star">✦</span>
+          </div>
+          <!-- Item 4 (Replicated) -->
+          <div class="marquee-item">
+            <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
+            <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
+            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <span class="marquee-star">✦</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Sticky Glass Navbar -->
@@ -687,8 +723,6 @@
             <h4 class="footer-col-title" data-i18n="footerCol2">सुरक्षा व कायदेशीर</h4>
             <ul class="footer-links">
               <li><a href="./privacy" data-i18n="navPrivacy">गोपनीयता धोरण</a></li>
-              <li><a href="./sitemap.xml" target="_blank" rel="noopener">Sitemap (XML)</a></li>
-              <li><a href="./robots.txt" target="_blank" rel="noopener">Robots (TXT)</a></li>
             </ul>
           </div>
 
@@ -696,7 +730,16 @@
             <h4 class="footer-col-title" data-i18n="footerCol3">सपोर्ट व संपर्क</h4>
             <ul class="footer-links">
               <li style="color: #cbd5e1; font-weight: 600;" data-i18n="footerDev">संतोष कोळी (Santosh Koli)</li>
-              <li><a href="mailto:homegrocery.security@gmail.com" style="color: var(--accent-cyan-light); word-break: break-all;">homegrocery.security@gmail.com</a></li>
+              <li>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <a href="mailto:homegrocery.security@gmail.com?subject=Home%20Grocery%20Support" id="supportMailLink" style="color: var(--accent-cyan-light); word-break: break-all; font-size: 0.88rem; text-decoration: underline;">
+                    homegrocery.security@gmail.com
+                  </a>
+                  <button type="button" id="copySupportEmailBtn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #cbd5e1; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; cursor: pointer; transition: all 0.2s;" title="Copy Email">
+                    📋 Copy
+                  </button>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

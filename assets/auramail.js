@@ -28,7 +28,9 @@
       langBtn: 'मराठी',
       langNext: 'English',
       announcement: 'घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!',
-      announcementBadge: 'नवीन अपडेट',
+      announcementBadge: 'ताज्या घडामोडी',
+      announcementCategory: 'अपडेट',
+      announcementAction: 'थेट डाऊनलोड (v1.0.3) →',
       navFeatures: 'वैशिष्ट्ये',
       navWorkflow: 'कसे कार्य करते',
       navDownload: 'डाऊनलोड',
@@ -139,7 +141,9 @@
       langBtn: 'EN',
       langNext: 'मराठी',
       announcement: 'Home Grocery v1.0.3 (Build 5) Official Stable Release is now live!',
-      announcementBadge: 'NEW RELEASE',
+      announcementBadge: 'UPDATES',
+      announcementCategory: 'UPDATE',
+      announcementAction: 'Download Now (v1.0.3) →',
       navFeatures: 'Features',
       navWorkflow: 'How It Works',
       navDownload: 'Download',
@@ -358,6 +362,23 @@
           });
         } else {
           showToast('SHA-256: ' + hash.slice(0, 16) + '...');
+        }
+      };
+    }
+
+    // 4b. Copy Support Email
+    const copyEmailBtn = document.getElementById('copySupportEmailBtn');
+    if (copyEmailBtn) {
+      copyEmailBtn.onclick = () => {
+        const email = 'homegrocery.security@gmail.com';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(() => {
+            showToast(currentLang === 'mr' ? 'सपोर्ट ईमेल कॉपी केला (homegrocery.security@gmail.com)!' : 'Support email copied to clipboard!');
+          }).catch(() => {
+            showToast(email);
+          });
+        } else {
+          showToast(email);
         }
       };
     }
