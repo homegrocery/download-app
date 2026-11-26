@@ -248,88 +248,283 @@
             </div>
           </div>
 
-          <!-- AuraMail Signature: 3D Isometric App Mockup -->
-          <div class="mockup-wrapper">
-            <div class="mockup-device-frame">
-              <div class="mockup-inner-screen">
-                <!-- Mockup App Header -->
-                <div class="mockup-app-header">
-                  <div class="mockup-app-title">
-                    <img src="./brand/home-grocery-logo.png" alt="App Icon" width="28" height="28" style="border-radius: 6px;" />
-                    <h4 data-i18n="mockupAppTitle">घरगुती किराणा यादी</h4>
+          <!-- 3-Device Perspective Showcase: Phone, Laptop, Desktop PC -->
+          <div class="perspective-container">
+            <!-- Detected Device Status Ribbon -->
+            <div class="detected-device-ribbon" id="detectedDeviceRibbon">
+              <div class="detected-indicator">
+                <span class="detected-pulse"></span>
+                <span class="detected-title" data-i18n="detectedTitle">डिव्हाइस ओळखले:</span>
+                <span class="detected-device-name" id="detectedNameDisplay">तपासत आहे...</span>
+              </div>
+              <div class="detected-action-note" id="detectedActionNote" data-i18n="detectedNote">
+                तुमच्या स्क्रीनसाठी अनुकूलित दृश्य
+              </div>
+            </div>
+
+            <!-- Interactive Perspective Tabs -->
+            <div class="perspective-tabs" role="tablist" aria-label="Device Perspectives">
+              <button class="perspective-tab-btn active" data-perspective="mobile" role="tab" aria-selected="true" id="tabMobile">
+                <span class="ptab-icon">📱</span>
+                <div class="ptab-info">
+                  <span class="ptab-title" data-i18n="pTabMobileTitle">मोबाईल फोन</span>
+                  <span class="ptab-sub" data-i18n="pTabMobileSub">Vivo / Android App</span>
+                </div>
+              </button>
+
+              <button class="perspective-tab-btn" data-perspective="laptop" role="tab" aria-selected="false" id="tabLaptop">
+                <span class="ptab-icon">💻</span>
+                <div class="ptab-info">
+                  <span class="ptab-title" data-i18n="pTabLaptopTitle">लॅपटॉप</span>
+                  <span class="ptab-sub" data-i18n="pTabLaptopSub">14" - 16" वाइडस्क्रीन</span>
+                </div>
+              </button>
+
+              <button class="perspective-tab-btn" data-perspective="pc" role="tab" aria-selected="false" id="tabPc">
+                <span class="ptab-icon">🖥️</span>
+                <div class="ptab-info">
+                  <span class="ptab-title" data-i18n="pTabPcTitle">डेस्कटॉप PC</span>
+                  <span class="ptab-sub" data-i18n="pTabPcSub">Ultra-Wide 4K मॉनिटर</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Perspective Display Stage -->
+            <div class="mockup-stage" id="mockupStage">
+              <!-- 1. MOBILE PHONE PERSPECTIVE (Vivo / Android) -->
+              <div class="perspective-view view-mobile active" id="viewMobile">
+                <div class="phone-frame">
+                  <div class="phone-speaker-notch">
+                    <div class="phone-camera"></div>
+                    <div class="phone-speaker"></div>
                   </div>
-                  <div class="mockup-badge-offline">
-                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981;"></span>
-                    <span data-i18n="mockupStatus">१००% ऑफलाइन</span>
+                  <div class="phone-screen">
+                    <!-- Mobile App UI Header -->
+                    <div class="mockup-app-header">
+                      <div class="mockup-app-title">
+                        <img src="./brand/home-grocery-logo.png" alt="App Icon" width="28" height="28" style="border-radius: 6px;" />
+                        <h4 data-i18n="mockupAppTitle">घरगुती किराणा यादी</h4>
+                      </div>
+                      <div class="mockup-badge-offline">
+                        <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981;"></span>
+                        <span data-i18n="mockupStatus">१००% ऑफलाइन</span>
+                      </div>
+                    </div>
+
+                    <!-- Budget Progress -->
+                    <div class="mockup-budget-card">
+                      <div class="budget-stats-row">
+                        <span class="budget-label" data-i18n="mockupBudgetLabel">मासिक किराणा अंदाजपत्रक</span>
+                        <span class="budget-values" data-i18n="mockupSpent">खर्च: ₹३,४५० / ₹५,०००</span>
+                      </div>
+                      <div class="budget-bar-bg">
+                        <div class="budget-bar-fill"></div>
+                      </div>
+                      <div class="budget-subtext">
+                        <span>प्रगती: ६९%</span>
+                        <span data-i18n="mockupSaved" style="color: #34d399; font-weight: 600;">शिल्लक: ₹१,५५० (३१%)</span>
+                      </div>
+                    </div>
+
+                    <!-- Items Checklist -->
+                    <div class="mockup-item-list">
+                      <div class="mockup-item">
+                        <div class="item-left">
+                          <div class="item-check-box">✓</div>
+                          <div>
+                            <span class="item-name" data-i18n="item1Name">बासमती तांदूळ</span>
+                            <span class="item-qty" data-i18n="item1Qty">५ किलो</span>
+                          </div>
+                        </div>
+                        <span class="item-price">₹४५०</span>
+                      </div>
+                      <div class="mockup-item">
+                        <div class="item-left">
+                          <div class="item-check-box">✓</div>
+                          <div>
+                            <span class="item-name" data-i18n="item2Name">शेंगदाणा तेल</span>
+                            <span class="item-qty" data-i18n="item2Qty">२ लिटर</span>
+                          </div>
+                        </div>
+                        <span class="item-price">₹३८०</span>
+                      </div>
+                      <div class="mockup-item">
+                        <div class="item-left">
+                          <div class="item-check-box">✓</div>
+                          <div>
+                            <span class="item-name" data-i18n="item3Name">तूर डाळ</span>
+                            <span class="item-qty" data-i18n="item3Qty">१ किलो</span>
+                          </div>
+                        </div>
+                        <span class="item-price">₹१६५</span>
+                      </div>
+                      <div class="mockup-item">
+                        <div class="item-left">
+                          <div class="item-check-box">✓</div>
+                          <div>
+                            <span class="item-name" data-i18n="item4Name">साखर व गूळ</span>
+                            <span class="item-qty" data-i18n="item4Qty">३ किलो</span>
+                          </div>
+                        </div>
+                        <span class="item-price">₹१३०</span>
+                      </div>
+                    </div>
+
+                    <!-- Mobile Bottom Bar -->
+                    <div class="mockup-actions">
+                      <div class="mockup-action-pill" data-i18n="mockupBtnPdf">📄 A4 PDF पावती जनरेट करा</div>
+                      <div class="mockup-action-pill" data-i18n="mockupBtnBackup">🔒 स्थानिक बॅकअप</div>
+                    </div>
+                  </div>
+                  <div class="phone-home-indicator"></div>
+                </div>
+              </div>
+
+              <!-- 2. LAPTOP PERSPECTIVE -->
+              <div class="perspective-view view-laptop" id="viewLaptop">
+                <div class="laptop-frame">
+                  <div class="laptop-lid">
+                    <div class="laptop-webcam"></div>
+                    <div class="laptop-screen">
+                      <!-- Laptop Dual-Pane UI -->
+                      <div class="laptop-ui-header">
+                        <div class="laptop-browser-dots">
+                          <span class="dot red"></span>
+                          <span class="dot yellow"></span>
+                          <span class="dot green"></span>
+                        </div>
+                        <div class="laptop-url-bar">homegrocery.online/app • 🔒 Secured by SHA-256</div>
+                        <div class="laptop-status-badge">100% Offline Storage</div>
+                      </div>
+                      <div class="laptop-content-grid">
+                        <div class="laptop-pane-left">
+                          <div class="lp-card">
+                            <span class="lp-label" data-i18n="laptopLedgerTitle">कुटुंबाचे किराणा लेजर</span>
+                            <h4 class="lp-total">₹३,४५० <small>/ ₹५,०००</small></h4>
+                            <div class="budget-bar-bg" style="margin-top: 8px;">
+                              <div class="budget-bar-fill" style="width: 69%;"></div>
+                            </div>
+                            <p class="lp-meta" data-i18n="laptopBudgetMeta">या महिन्यात ₹१,५५० बचत (३१% शिल्लक)</p>
+                          </div>
+                          <div class="lp-quick-actions">
+                            <button class="lp-btn" data-i18n="lpBtn1">📄 देवनागरी PDF पावती (A4)</button>
+                            <button class="lp-btn" data-i18n="lpBtn2">📊 मासिक अहवाल विश्लेषण</button>
+                            <button class="lp-btn" data-i18n="lpBtn3">🔄 स्थानिक बॅकअप</button>
+                          </div>
+                        </div>
+                        <div class="laptop-pane-right">
+                          <div class="lp-table-head">
+                            <span>वस्तूचे नाव</span>
+                            <span>प्रमाण</span>
+                            <span>किंमत</span>
+                            <span>स्थिती</span>
+                          </div>
+                          <div class="lp-table-row">
+                            <span class="row-name">🌾 कोलम तांदूळ</span>
+                            <span class="row-qty">१० किलो</span>
+                            <span class="row-price">₹५८०</span>
+                            <span class="row-status badge-ok">खरेदी झाली ✓</span>
+                          </div>
+                          <div class="lp-table-row">
+                            <span class="row-name">🥜 शुद्ध शेंगदाणा तेल</span>
+                            <span class="row-qty">५ लिटर</span>
+                            <span class="row-price">₹८९०</span>
+                            <span class="row-status badge-ok">खरेदी झाली ✓</span>
+                          </div>
+                          <div class="lp-table-row">
+                            <span class="row-name">🫘 गावरान तूर डाळ</span>
+                            <span class="row-qty">२ किलो</span>
+                            <span class="row-price">₹३३०</span>
+                            <span class="row-status badge-ok">खरेदी झाली ✓</span>
+                          </div>
+                          <div class="lp-table-row">
+                            <span class="row-name">☕ चहा पावडर व मसाले</span>
+                            <span class="row-qty">५०० ग्रॅम</span>
+                            <span class="row-price">₹२४०</span>
+                            <span class="row-status badge-pending">यादीत समाविष्ट</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Laptop Base with Keyboard & Trackpad -->
+                  <div class="laptop-base">
+                    <div class="laptop-notch"></div>
                   </div>
                 </div>
+              </div>
 
-                <!-- Mockup Budget Meter -->
-                <div class="mockup-budget-card">
-                  <div class="budget-stats-row">
-                    <span class="budget-label" data-i18n="mockupBudgetLabel">मासिक किराणा अंदाजपत्रक</span>
-                    <span class="budget-values" data-i18n="mockupSpent">खर्च: ₹३,४५० / ₹५,०००</span>
-                  </div>
-                  <div class="budget-bar-bg">
-                    <div class="budget-bar-fill"></div>
-                  </div>
-                  <div class="budget-subtext">
-                    <span>प्रगती: ६९%</span>
-                    <span data-i18n="mockupSaved" style="color: #34d399; font-weight: 600;">शिल्लक: ₹१,५५० (३१%)</span>
-                  </div>
-                </div>
-
-                <!-- Mockup Grocery Items -->
-                <div class="mockup-item-list">
-                  <div class="mockup-item">
-                    <div class="item-left">
-                      <div class="item-check-box">✓</div>
-                      <div>
-                        <span class="item-name" data-i18n="item1Name">बासमती तांदूळ</span>
-                        <span class="item-qty" data-i18n="item1Qty">५ किलो</span>
+              <!-- 3. DESKTOP PC PERSPECTIVE -->
+              <div class="perspective-view view-pc" id="viewPc">
+                <div class="pc-monitor-frame">
+                  <div class="pc-screen">
+                    <div class="pc-ui-topbar">
+                      <div class="pc-brand">
+                        <img src="./brand/home-grocery-logo.png" alt="Logo" width="22" height="22" />
+                        <span>Home Grocery Workstation • 4K Perspective</span>
+                      </div>
+                      <div class="pc-topbar-pills">
+                        <span class="pc-pill">v1.0.3 (Build 5)</span>
+                        <span class="pc-pill cyan">WebCrypto SHA-256</span>
+                        <span class="pc-pill green">100% Offline Vault</span>
                       </div>
                     </div>
-                    <span class="item-price">₹४५०</span>
-                  </div>
-
-                  <div class="mockup-item">
-                    <div class="item-left">
-                      <div class="item-check-box">✓</div>
-                      <div>
-                        <span class="item-name" data-i18n="item2Name">शेंगदाणा तेल</span>
-                        <span class="item-qty" data-i18n="item2Qty">२ लिटर</span>
+                    <div class="pc-dashboard-layout">
+                      <!-- Left Sidebar -->
+                      <div class="pc-sidebar">
+                        <div class="pc-nav-item active">📋 सर्व किराणा याद्या</div>
+                        <div class="pc-nav-item">📈 बजेट विश्लेषण</div>
+                        <div class="pc-nav-item">🖨️ A4 पावती प्रिंटर</div>
+                        <div class="pc-nav-item">🔐 सुरक्षा व बॅकअप</div>
+                      </div>
+                      <!-- Center Main Display -->
+                      <div class="pc-main-content">
+                        <div class="pc-stat-cards-row">
+                          <div class="pc-mini-card">
+                            <span class="pc-card-label">एकूण किराणा वस्तू</span>
+                            <span class="pc-card-val">२८ साहित्य</span>
+                          </div>
+                          <div class="pc-mini-card">
+                            <span class="pc-card-label">मासिक मर्यादा</span>
+                            <span class="pc-card-val">₹५,०००</span>
+                          </div>
+                          <div class="pc-mini-card">
+                            <span class="pc-card-label">सध्याचा खर्च</span>
+                            <span class="pc-card-val text-cyan">₹३,४५०</span>
+                          </div>
+                          <div class="pc-mini-card">
+                            <span class="pc-card-label">शिल्लक रक्कम</span>
+                            <span class="pc-card-val text-green">₹१,५५०</span>
+                          </div>
+                        </div>
+                        <div class="pc-a4-preview-box">
+                          <div class="pc-a4-header">
+                            <div>
+                              <h5>📄 A4 देवनागरी पावती थेट प्रिंट लेआउट</h5>
+                              <small>दुकानदार व कौटुंबिक हिशोबासाठी अधिकृत फॉरमॅट</small>
+                            </div>
+                            <span class="pc-tag-ready">प्रिंटसाठी तयार ✓</span>
+                          </div>
+                          <div class="pc-a4-sample-sheet">
+                            <div class="a4-sheet-header">
+                              <strong>घरगुती किराणा पावती — नोव्हेंबर २०२६</strong>
+                              <span>तारीख: २६/११/२०२६ • एकूण: ₹३,४५०</span>
+                            </div>
+                            <div class="a4-sheet-rule"></div>
+                            <div class="a4-sheet-grid">
+                              <span>१. बासमती तांदूळ (५ किलो) — ₹४५०</span>
+                              <span>२. शेंगदाणा तेल (२ लिटर) — ₹३८०</span>
+                              <span>३. तूर डाळ (१ किलो) — ₹१६५</span>
+                              <span>४. साखर व गूळ (३ किलो) — ₹१३०</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <span class="item-price">₹३८०</span>
                   </div>
-
-                  <div class="mockup-item">
-                    <div class="item-left">
-                      <div class="item-check-box">✓</div>
-                      <div>
-                        <span class="item-name" data-i18n="item3Name">तूर डाळ</span>
-                        <span class="item-qty" data-i18n="item3Qty">१ किलो</span>
-                      </div>
-                    </div>
-                    <span class="item-price">₹१६५</span>
-                  </div>
-
-                  <div class="mockup-item">
-                    <div class="item-left">
-                      <div class="item-check-box">✓</div>
-                      <div>
-                        <span class="item-name" data-i18n="item4Name">साखर व गूळ</span>
-                        <span class="item-qty" data-i18n="item4Qty">३ किलो</span>
-                      </div>
-                    </div>
-                    <span class="item-price">₹१३०</span>
-                  </div>
-                </div>
-
-                <!-- Mockup Actions -->
-                <div class="mockup-actions">
-                  <div class="mockup-action-pill" data-i18n="mockupBtnPdf">📄 A4 PDF पावती जनरेट करा</div>
-                  <div class="mockup-action-pill" data-i18n="mockupBtnBackup">🔒 सुरक्षित बॅकअप</div>
+                  <!-- PC Monitor Stand & Base -->
+                  <div class="pc-stand-stem"></div>
+                  <div class="pc-stand-base"></div>
                 </div>
               </div>
             </div>

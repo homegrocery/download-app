@@ -69,6 +69,21 @@
       mockupBtnPdf: '📄 A4 PDF पावती जनरेट करा',
       mockupBtnBackup: '🔒 सुरक्षित बॅकअप',
 
+      // Multi-Device Perspective Showcase
+      detectedTitle: 'डिव्हाइस ओळखले:',
+      detectedNote: 'तुमच्या स्क्रीनसाठी अनुकूलित दृश्य',
+      pTabMobileTitle: 'मोबाईल फोन',
+      pTabMobileSub: 'Vivo / Android App',
+      pTabLaptopTitle: 'लॅपटॉप',
+      pTabLaptopSub: '14" - 16" वाइडस्क्रीन',
+      pTabPcTitle: 'डेस्कटॉप PC',
+      pTabPcSub: 'Ultra-Wide 4K मॉनिटर',
+      laptopLedgerTitle: 'कुटुंबाचे किराणा लेजर',
+      laptopBudgetMeta: 'या महिन्यात ₹१,५५० बचत (३१% शिल्लक)',
+      lpBtn1: '📄 देवनागरी PDF पावती (A4)',
+      lpBtn2: '📊 मासिक अहवाल विश्लेषण',
+      lpBtn3: '🔄 स्थानिक बॅकअप',
+
       // Stats
       stat1Num: '१००%',
       stat1Label: 'ऑफलाइन कार्यक्षमता (डेटा सुरक्षित)',
@@ -208,6 +223,21 @@
       item4Qty: '3 kg',
       mockupBtnPdf: '📄 Generate A4 PDF Receipt',
       mockupBtnBackup: '🔒 Secure Cloud Backup',
+
+      // Multi-Device Perspective Showcase
+      detectedTitle: 'Device Detected:',
+      detectedNote: 'Optimized perspective for your screen',
+      pTabMobileTitle: 'Mobile Phone',
+      pTabMobileSub: 'Vivo / Android App',
+      pTabLaptopTitle: 'Laptop',
+      pTabLaptopSub: '14" - 16" Widescreen',
+      pTabPcTitle: 'Desktop PC',
+      pTabPcSub: 'Ultra-Wide 4K Monitor',
+      laptopLedgerTitle: 'Household Grocery Ledger',
+      laptopBudgetMeta: 'Saved ₹1,550 this month (31% remaining)',
+      lpBtn1: '📄 Devanagari PDF Receipt (A4)',
+      lpBtn2: '📊 Monthly Report Analytics',
+      lpBtn3: '🔄 Local Vault Backup',
 
       // Stats
       stat1Num: '100%',
@@ -513,6 +543,104 @@
         }
       };
     }
+
+    // 8. Multi-Device Perspective Engine (Mobile, Laptop, Desktop PC)
+    initDevicePerspective();
+  }
+
+  // ========================================================
+  // AUTOMATIC DEVICE PERSPECTIVE ENGINE (Mobile, Laptop, PC)
+  // ========================================================
+  function initDevicePerspective() {
+    const nameDisplay = document.getElementById('detectedNameDisplay');
+    const noteDisplay = document.getElementById('detectedActionNote');
+    const tabs = document.querySelectorAll('.perspective-tab-btn');
+    const stage = document.getElementById('mockupStage');
+
+    if (!tabs.length || !stage) return;
+
+    // Detect Current Device
+    const ua = navigator.userAgent || '';
+    const width = window.innerWidth;
+    const isTouch = navigator.maxTouchPoints > 0 || 'ontouchstart' in window;
+
+    let detectedType = 'mobile';
+    let deviceLabel = 'Android Mobile Phone';
+    let noteText = currentLang === 'mr' ? 'मोबाईल स्क्रीनसाठी जलद व स्मूथ अनुभव' : 'Fast 60fps experience optimized for mobile';
+
+    const isVivo = /vivo/i.test(ua);
+    const isAndroid = /android/i.test(ua);
+    const isIos = /iphone|ipad|ipod/i.test(ua);
+
+    if (isVivo) {
+      detectedType = 'mobile';
+      deviceLabel = currentLang === 'mr' ? `Vivo Mobile (${width}×${window.innerHeight} px)` : `Vivo Mobile (${width}×${window.innerHeight} px)`;
+      noteText = currentLang === 'mr' ? 'Vivo फोनसाठी GPU-अ‍ॅक्सिलरेटेड स्मूथ दृश्य सक्रिय' : 'GPU-accelerated smooth view active for Vivo phone';
+    } else if (isAndroid || isIos || (isTouch && width <= 768)) {
+      detectedType = 'mobile';
+      deviceLabel = currentLang === 'mr' ? `मोबाईल फोन (${width}×${window.innerHeight} px)` : `Mobile Phone (${width}×${window.innerHeight} px)`;
+      noteText = currentLang === 'mr' ? 'मोबाईल स्क्रीनसाठी टच-ऑप्टिमाइझ्ड दृश्य' : 'Touch-optimized view for mobile screen';
+    } else if (width > 768 && width <= 1280) {
+      detectedType = 'laptop';
+      deviceLabel = currentLang === 'mr' ? `लॅपटॉप स्क्रीन (${width}×${window.innerHeight} px)` : `Laptop Screen (${width}×${window.innerHeight} px)`;
+      noteText = currentLang === 'mr' ? '१४"-१६" लॅपटॉपसाठी ड्युएल-पेन लेआउट सक्रिय' : 'Dual-pane desktop layout active for laptop';
+    } else {
+      detectedType = 'pc';
+      deviceLabel = currentLang === 'mr' ? `डेस्कटॉप PC मॉनिटर (${width}×${window.innerHeight} px)` : `Desktop PC Workstation (${width}×${window.innerHeight} px)`;
+      noteText = currentLang === 'mr' ? 'हाय-डेफिनिशन अल्ट्रा-वाईड दृश्य सक्रिय' : 'High-definition ultra-wide view active for Desktop PC';
+    }
+
+    if (nameDisplay) {
+      nameDisplay.innerText = deviceLabel;
+    }
+    if (noteDisplay) {
+      noteDisplay.innerText = noteText;
+    }
+
+    // Set Active Perspective View
+    function switchPerspective(type) {
+      tabs.forEach((tab) => {
+        const isActive = tab.getAttribute('data-perspective') === type;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      document.querySelectorAll('.perspective-view').forEach((view) => {
+        const matches = view.id === ('view' + type.charAt(0).toUpperCase() + type.slice(1));
+        view.classList.toggle('active', matches);
+      });
+    }
+
+    // Bind tab clicks
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const targetType = tab.getAttribute('data-perspective');
+        if (targetType) {
+          switchPerspective(targetType);
+        }
+      });
+    });
+
+    // Default to user's detected device perspective
+    switchPerspective(detectedType);
+
+    // Dynamic resize handler (debounced)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const curWidth = window.innerWidth;
+        if (nameDisplay && !nameDisplay.dataset.manual) {
+          if (curWidth <= 768) {
+            nameDisplay.innerText = isVivo ? `Vivo Mobile (${curWidth}px)` : `Mobile Phone (${curWidth}px)`;
+          } else if (curWidth <= 1280) {
+            nameDisplay.innerText = `Laptop Screen (${curWidth}px)`;
+          } else {
+            nameDisplay.innerText = `Desktop PC (${curWidth}px)`;
+          }
+        }
+      }, 300);
+    });
   }
 
   // ========================================================
