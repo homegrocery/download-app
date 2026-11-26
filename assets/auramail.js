@@ -382,22 +382,43 @@
       langBtn.onclick = toggleLanguage;
     }
 
-    // 3. Mobile Navigation Drawer
+    // 3. Mobile Navigation Drawer (Hamburger 3-Bar Button)
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     if (mobileMenuBtn && mobileDrawer) {
-      mobileMenuBtn.onclick = (e) => {
-        e.stopPropagation();
-        mobileDrawer.classList.toggle('open');
-      };
+      function toggleMobileMenu(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const isOpen = mobileDrawer.classList.toggle('open');
+        mobileMenuBtn.classList.toggle('active', isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
+
+      function closeMobileMenu() {
+        mobileDrawer.classList.remove('open');
+        mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      mobileMenuBtn.onclick = toggleMobileMenu;
+
       mobileDrawer.querySelectorAll('a').forEach((link) => {
-        link.onclick = () => {
-          mobileDrawer.classList.remove('open');
-        };
+        link.addEventListener('click', () => {
+          closeMobileMenu();
+        });
       });
+
       document.addEventListener('click', (e) => {
-        if (!mobileDrawer.contains(e.target) && e.target !== mobileMenuBtn) {
-          mobileDrawer.classList.remove('open');
+        if (!mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+          closeMobileMenu();
         }
       });
     }

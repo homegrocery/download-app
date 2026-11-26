@@ -175,7 +175,7 @@
           </a>
 
           <!-- Mobile Hamburger 3-Bar Button -->
-          <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
             <span class="bar-line"></span>
             <span class="bar-line"></span>
             <span class="bar-line"></span>
@@ -187,7 +187,7 @@
       <div id="mobileDrawer" class="mobile-drawer" role="dialog" aria-label="Mobile Navigation">
         <a href="#features" data-i18n="navFeatures">वैशिष्ट्ये</a>
         <a href="#workflow" data-i18n="navWorkflow">कसे कार्य करते</a>
-        <a href="#download" data-i18n="navDownload">डाऊनलोड</a>
+        <a href="#download" class="download-trigger" data-i18n="navDownload">डाऊनलोड</a>
         <a href="#faq" data-i18n="navFaq">प्रश्नोत्तरे</a>
         <a href="./privacy" data-i18n="navPrivacy">गोपनीयता धोरण</a>
         <a href="#download" class="shimmer-btn download-trigger" style="margin-top: 12px; text-align: center;">
@@ -701,7 +701,7 @@
     <nav class="mobile-bottom-bar" aria-label="Mobile Quick Navigation">
       <a href="#hero" data-i18n="mobNavHome">🏠 मुख्य</a>
       <a href="#features" data-i18n="mobNavFeat">⚡ वैशिष्ट्ये</a>
-      <a href="#download" class="active-cta" data-i18n="mobNavDl">📲 डाऊनलोड APK</a>
+      <a href="#download" class="active-cta download-trigger" data-i18n="mobNavDl">📲 डाऊनलोड APK</a>
     </nav>
 
     <!-- 7. UNIFIED AURAMAIL FOOTER -->
