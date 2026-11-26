@@ -1546,3 +1546,453 @@ body {
     animation: none;
   }
 }
+
+/* ======================================================== */
+/* CRYPTOGRAPHIC DOWNLOAD & INTEGRITY VAULT MODAL STYLES    */
+/* ======================================================== */
+.dl-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(3, 7, 18, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: dlFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-modal-card {
+  background: linear-gradient(180deg, #0b1528 0%, #060c18 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(6, 182, 212, 0.2);
+  border-radius: 24px;
+  max-width: 580px;
+  width: 100%;
+  max-height: 94vh;
+  overflow-y: auto;
+  position: relative;
+  color: #ffffff;
+  animation: dlScaleIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.dl-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dl-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #06b6d4;
+  box-shadow: 0 0 12px #06b6d4;
+  animation: pulseGlow 1.8s infinite;
+  flex-shrink: 0;
+}
+
+.dl-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.dl-modal-sub {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: block;
+  margin-top: 2px;
+}
+
+.dl-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 25;
+  pointer-events: auto;
+}
+
+.dl-close-btn svg {
+  pointer-events: none;
+}
+
+.dl-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  transform: scale(1.05);
+}
+
+.dl-meta-pill-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 18px 24px 14px;
+  padding: 14px 16px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 14px;
+}
+
+.dl-meta-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.dl-meta-label {
+  color: #94a3b8;
+}
+
+.dl-meta-val {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.dl-pill-cyan {
+  color: #38bdf8 !important;
+  background: rgba(6, 182, 212, 0.15);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.dl-pipeline-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 24px 18px;
+  padding: 0 4px;
+}
+
+.dl-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.dl-step-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 2px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #94a3b8;
+  transition: all 0.25s ease;
+}
+
+.dl-step.active .dl-step-indicator {
+  border-color: #06b6d4;
+  background: rgba(6, 182, 212, 0.2);
+  color: #38bdf8;
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.5);
+}
+
+.dl-step.completed .dl-step-indicator {
+  border-color: #10b981;
+  background: #10b981;
+  color: #ffffff;
+}
+
+.dl-step .dl-step-check {
+  display: none;
+}
+
+.dl-step.completed .dl-step-check {
+  display: block;
+}
+
+.dl-step.completed .dl-step-num {
+  display: none;
+}
+
+.dl-step-text {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.dl-step.active .dl-step-text {
+  color: #38bdf8;
+}
+
+.dl-step.completed .dl-step-text {
+  color: #10b981;
+}
+
+.dl-step-line {
+  flex: 1;
+  height: 2px;
+  background: #1e293b;
+  margin: -14px 6px 0;
+  transition: background 0.3s ease;
+}
+
+.dl-step-line.completed {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.dl-progress-container {
+  margin: 0 24px 16px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.dl-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.dl-status-label {
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dl-progress-percent {
+  font-family: monospace;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.dl-progress-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.dl-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #06b6d4, #2563eb, #38bdf8);
+  border-radius: 8px;
+  transition: width 0.15s ease-out;
+  position: relative;
+}
+
+.dl-progress-glow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: #ffffff;
+  filter: blur(3px);
+  opacity: 0.8;
+}
+
+.dl-progress-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.74rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.dl-checksum-card {
+  margin: 0 24px 16px;
+  padding: 14px 16px;
+  background: rgba(7, 14, 28, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dl-cs-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.74rem;
+}
+
+.dl-cs-label {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.dl-cs-hash {
+  word-break: break-all;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dl-cs-hash.text-cyan {
+  color: #38bdf8;
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+.dl-verdict-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 8px;
+  color: #34d399;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.dl-install-guide {
+  margin: 0 24px 16px;
+  padding: 14px 16px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  border-radius: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  animation: dlFadeIn 0.3s ease;
+}
+
+.dl-guide-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.dl-guide-content h4 {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: #fde047;
+  font-weight: 700;
+}
+
+.dl-guide-content ol {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.dl-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.5);
+  position: sticky;
+  bottom: 0;
+  backdrop-filter: blur(8px);
+}
+
+.dl-btn-cancel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 25;
+  pointer-events: auto;
+}
+
+.dl-btn-cancel:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+@keyframes dlFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes dlScaleIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .dl-modal-card {
+    border-radius: 20px;
+  }
+  .dl-modal-header,
+  .dl-meta-pill-box,
+  .dl-pipeline-steps,
+  .dl-progress-container,
+  .dl-checksum-card,
+  .dl-install-guide,
+  .dl-modal-actions {
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .dl-meta-pill-box {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .dl-step-text {
+    font-size: 0.64rem;
+  }
+}

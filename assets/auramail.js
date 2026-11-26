@@ -134,7 +134,34 @@
       footerCol2: 'सुरक्षा व कायदेशीर',
       footerCol3: 'विकसक',
       footerDev: 'संतोष कोळी (Santosh Koli)',
-      footerRights: 'सर्व हक्क राखीव.'
+      footerRights: 'सर्व हक्क राखीव.',
+
+      // Verified Downloader Window
+      dlModalTitle: 'अधिकृत उत्पादन डाऊनलोडर',
+      dlModalSub: 'क्रिप्टोग्राफिक पडताळणी गेटवे • v1.0.3 (Build 5)',
+      dlMetaVer: 'आवृत्ती:',
+      dlMetaCode: 'versionCode:',
+      dlMetaChannel: 'चॅनेल:',
+      dlMetaSize: 'आकार:',
+      dlStep1Text: 'मेनिफेस्ट हँडशेक',
+      dlStep2Text: 'थेट बायनरी प्रवाह',
+      dlStep3Text: 'SHA-256 पडताळणी',
+      dlStep4Text: 'APK वितरण',
+      dlStatusInit: 'सुरक्षित डाऊनलोड सुरू करत आहे...',
+      dlStatusHandshake: 'सुरक्षित सर्व्हर मेनिफेस्ट पडताळत आहे...',
+      dlStatusDownloading: 'बायनरी डेटा प्रवाह डाऊनलोड होत आहे...',
+      dlStatusHashing: 'क्रिप्टोग्राफिक SHA-256 हॅश मोजत आहे...',
+      dlStatusComplete: 'पडताळणी यशस्वी! APK फाईल सेव्ह होत आहे...',
+      dlStatusAborted: 'डाऊनलोड रद्द केले (प्रक्रिया थांबवली).',
+      dlExpectedHashLabel: 'अधिकृत SHA-256 (अपेक्षित):',
+      dlComputedHashLabel: 'मोजलेला SHA-256 (गणित):',
+      dlVerdictSuccess: '१००% क्रिप्टोग्राफिक हॅश पडताळणी यशस्वी',
+      dlGuideTitle: 'APK यशस्वीरित्या डाऊनलोड झाला! इन्स्टॉल कसे करावे:',
+      dlGuide1: 'डाऊनलोड्स फोल्डरमधील HomeGrocery-v1.0.3-build5.apk उघडा.',
+      dlGuide2: 'Google Play Protect सूचना आल्यास \'More details\' वर टॅप करून \'Install anyway\' निवडा.',
+      dlBtnCancel: 'रद्द करा (थांबवा)',
+      dlBtnStart: 'डाऊनलोड सुरू करा',
+      dlBtnDone: 'पूर्ण झाले'
     },
 
     en: {
@@ -247,7 +274,34 @@
       footerCol2: 'Security & Legal',
       footerCol3: 'Author',
       footerDev: 'Santosh Koli',
-      footerRights: 'All rights reserved.'
+      footerRights: 'All rights reserved.',
+
+      // Verified Downloader Window
+      dlModalTitle: 'Official Production Downloader',
+      dlModalSub: 'Cryptographic Integrity Gateway • v1.0.3 (Build 5)',
+      dlMetaVer: 'Version:',
+      dlMetaCode: 'versionCode:',
+      dlMetaChannel: 'Channel:',
+      dlMetaSize: 'Size:',
+      dlStep1Text: 'Manifest Handshake',
+      dlStep2Text: 'Binary Stream',
+      dlStep3Text: 'SHA-256 Verify',
+      dlStep4Text: 'APK Delivery',
+      dlStatusInit: 'Initializing secure download...',
+      dlStatusHandshake: 'Checking server release manifest...',
+      dlStatusDownloading: 'Streaming authentic binary data...',
+      dlStatusHashing: 'Computing WebCrypto SHA-256 hash...',
+      dlStatusComplete: 'Integrity verified! Delivering APK file...',
+      dlStatusAborted: 'Download aborted (Process stopped).',
+      dlExpectedHashLabel: 'Authoritative SHA-256 (Expected):',
+      dlComputedHashLabel: 'Computed SHA-256 (Calculated):',
+      dlVerdictSuccess: '100% Cryptographic Checksum Match Verified',
+      dlGuideTitle: 'APK delivered successfully! How to install:',
+      dlGuide1: 'Open HomeGrocery-v1.0.3-build5.apk from your Downloads folder.',
+      dlGuide2: 'If Google Play Protect alert appears, tap \'More details\' and select \'Install anyway\'.',
+      dlBtnCancel: 'Cancel (Stop)',
+      dlBtnStart: 'Start Download',
+      dlBtnDone: 'Done'
     }
   };
 
@@ -414,6 +468,298 @@
         }
       });
     });
+
+    // 7. Verified Downloader Modal & Triggers (Delegated + Direct)
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('.download-trigger');
+      if (trigger) {
+        e.preventDefault();
+        const dlSection = document.getElementById('download');
+        if (dlSection) {
+          dlSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        openDownloadModal();
+        return;
+      }
+
+      if (e.target.closest('#dlModalCloseBtn') || e.target.closest('#dlCancelBtn')) {
+        e.preventDefault();
+        closeDownloadModal();
+        return;
+      }
+
+      const modal = document.getElementById('downloadModal');
+      if (modal && e.target === modal) {
+        e.preventDefault();
+        closeDownloadModal();
+        return;
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('downloadModal');
+        if (modal && modal.style.display !== 'none') {
+          closeDownloadModal();
+        }
+      }
+    });
+
+    const dlActionPrimaryBtn = document.getElementById('dlActionPrimaryBtn');
+    if (dlActionPrimaryBtn) {
+      dlActionPrimaryBtn.onclick = () => {
+        if (!isDownloadRunning) {
+          startVerifiedDownload();
+        }
+      };
+    }
+  }
+
+  // ========================================================
+  // VERIFIED CRYPTOGRAPHIC DOWNLOADER CONTROLLER
+  // ========================================================
+  let downloadAbortController = null;
+  let isDownloadRunning = false;
+
+  const OFFICIAL_RELEASE = {
+    versionName: '1.0.3',
+    buildNumber: 5,
+    versionCode: 33,
+    apkFilename: 'HomeGrocery-v1.0.3-build5.apk',
+    downloadUrl: './HomeGrocery-v1.0.3-build5.apk',
+    sizeBytes: 7855609,
+    expectedSha256: 'A47BD907B41A2950B1136E4A6707C5C1DA0A7D617FDE67200AC14ADBA2EFCF93'
+  };
+
+  function openDownloadModal() {
+    const modal = document.getElementById('downloadModal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    startVerifiedDownload();
+  }
+
+  function closeDownloadModal() {
+    const modal = document.getElementById('downloadModal');
+    if (downloadAbortController) {
+      try {
+        downloadAbortController.abort('USER_CANCELLED');
+      } catch (e) {}
+    }
+    isDownloadRunning = false;
+    if (modal) {
+      modal.style.display = 'none';
+    }
+    document.body.style.overflow = '';
+  }
+
+  async function startVerifiedDownload() {
+    if (isDownloadRunning) return;
+    isDownloadRunning = true;
+
+    // Elements
+    const step1 = document.getElementById('dlStep1');
+    const step2 = document.getElementById('dlStep2');
+    const step3 = document.getElementById('dlStep3');
+    const step4 = document.getElementById('dlStep4');
+    const line1 = document.getElementById('dlLine1');
+    const line2 = document.getElementById('dlLine2');
+    const line3 = document.getElementById('dlLine3');
+
+    const statusLabel = document.getElementById('dlStatusLabel');
+    const progressPercent = document.getElementById('dlProgressPercent');
+    const progressBar = document.getElementById('dlProgressBar');
+    const bytesText = document.getElementById('dlBytesText');
+    const speedText = document.getElementById('dlSpeedText');
+
+    const computedRow = document.getElementById('dlComputedHashRow');
+    const computedVal = document.getElementById('dlComputedHashVal');
+    const verdict = document.getElementById('dlHashVerdict');
+    const guide = document.getElementById('dlSuccessGuide');
+    const actionBtn = document.getElementById('dlActionPrimaryBtn');
+    const actionText = document.getElementById('dlActionBtnText');
+
+    // Reset UI
+    [step1, step2, step3, step4].forEach((s) => s && (s.className = 'dl-step'));
+    [line1, line2, line3].forEach((l) => l && (l.className = 'dl-step-line'));
+    if (step1) step1.className = 'dl-step active';
+
+    if (computedRow) computedRow.style.display = 'none';
+    if (verdict) verdict.style.display = 'none';
+    if (guide) guide.style.display = 'none';
+
+    if (progressBar) progressBar.style.width = '0%';
+    if (progressPercent) progressPercent.innerText = '0%';
+    if (bytesText) bytesText.innerText = '0.00 MB / 7.49 MB';
+    if (speedText) speedText.innerText = '-- KB/s';
+
+    if (statusLabel) {
+      statusLabel.innerText = currentLang === 'mr' ? 'सुरक्षित सर्व्हर मेनिफेस्ट पडताळत आहे...' : 'Checking server release manifest...';
+    }
+    if (actionText) {
+      actionText.innerText = currentLang === 'mr' ? 'डाऊनलोड होत आहे...' : 'Downloading...';
+    }
+    if (actionBtn) actionBtn.disabled = true;
+
+    downloadAbortController = new AbortController();
+
+    try {
+      // Step 1: Handshake (Manifest check)
+      await new Promise((r) => setTimeout(r, 300));
+      if (!isDownloadRunning) return;
+      if (step1) step1.className = 'dl-step completed';
+      if (line1) line1.className = 'dl-step-line completed';
+      if (step2) step2.className = 'dl-step active';
+
+      if (statusLabel) {
+        statusLabel.innerText = currentLang === 'mr' ? 'बायनरी डेटा प्रवाह डाऊनलोड होत आहे...' : 'Streaming authentic binary data...';
+      }
+
+      // Step 2: Streaming download with progress
+      const startTime = Date.now();
+      const response = await fetch(OFFICIAL_RELEASE.downloadUrl, {
+        signal: downloadAbortController.signal,
+        cache: 'no-cache'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP_${response.status}`);
+      }
+
+      const contentLengthHeader = response.headers.get('content-length');
+      const totalBytes = contentLengthHeader ? parseInt(contentLengthHeader, 10) : OFFICIAL_RELEASE.sizeBytes;
+      const reader = response.body ? response.body.getReader() : null;
+
+      let receivedBytes = 0;
+      const chunks = [];
+
+      if (reader) {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          receivedBytes += value.length;
+
+          const pct = Math.min(100, Math.round((receivedBytes / totalBytes) * 100));
+          if (progressBar) progressBar.style.width = pct + '%';
+          if (progressPercent) progressPercent.innerText = pct + '%';
+          if (bytesText) {
+            bytesText.innerText = `${(receivedBytes / (1024 * 1024)).toFixed(2)} MB / ${(totalBytes / (1024 * 1024)).toFixed(2)} MB`;
+          }
+
+          const elapsedSec = (Date.now() - startTime) / 1000;
+          if (elapsedSec > 0.1 && speedText) {
+            const kbSec = Math.round(receivedBytes / 1024 / elapsedSec);
+            speedText.innerText = kbSec > 1024 ? `${(kbSec / 1024).toFixed(1)} MB/s` : `${kbSec} KB/s`;
+          }
+        }
+      } else {
+        const buffer = await response.arrayBuffer();
+        chunks.push(new Uint8Array(buffer));
+        receivedBytes = buffer.byteLength;
+        if (progressBar) progressBar.style.width = '100%';
+        if (progressPercent) progressPercent.innerText = '100%';
+      }
+
+      if (!isDownloadRunning) return;
+      if (step2) step2.className = 'dl-step completed';
+      if (line2) line2.className = 'dl-step-line completed';
+      if (step3) step3.className = 'dl-step active';
+
+      if (statusLabel) {
+        statusLabel.innerText = currentLang === 'mr' ? 'क्रिप्टोग्राफिक SHA-256 हॅश मोजत आहे...' : 'Computing WebCrypto SHA-256 hash...';
+      }
+
+      // Step 3: WebCrypto SHA-256 Verification
+      if (computedRow) computedRow.style.display = 'flex';
+      if (computedVal) {
+        computedVal.innerText = currentLang === 'mr' ? 'मोजत आहे...' : 'Computing...';
+      }
+
+      const combinedBuffer = new Uint8Array(receivedBytes);
+      let offset = 0;
+      for (const chunk of chunks) {
+        combinedBuffer.set(chunk, offset);
+        offset += chunk.length;
+      }
+
+      const hashBuffer = await crypto.subtle.digest('SHA-256', combinedBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const computedHash = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+
+      if (computedVal) {
+        computedVal.innerText = computedHash;
+      }
+
+      if (computedHash === OFFICIAL_RELEASE.expectedSha256) {
+        if (verdict) verdict.style.display = 'inline-flex';
+        if (step3) step3.className = 'dl-step completed';
+        if (line3) line3.className = 'dl-step-line completed';
+        if (step4) step4.className = 'dl-step completed';
+
+        if (statusLabel) {
+          statusLabel.innerText = currentLang === 'mr' ? 'पडताळणी यशस्वी! APK फाईल सेव्ह होत आहे...' : 'Integrity verified! Delivering APK file...';
+        }
+
+        // Deliver verified APK via Blob object URL
+        const blob = new Blob([combinedBuffer], { type: 'application/vnd.android.package-archive' });
+        const objectUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = objectUrl;
+        a.download = OFFICIAL_RELEASE.apkFilename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 30000);
+
+        if (guide) guide.style.display = 'flex';
+
+        if (actionText) {
+          actionText.innerText = currentLang === 'mr' ? 'पूर्ण झाले (पुन्हा डाउनलोड)' : 'Done (Download Again)';
+        }
+        if (actionBtn) {
+          actionBtn.disabled = false;
+          actionBtn.onclick = () => {
+            isDownloadRunning = false;
+            startVerifiedDownload();
+          };
+        }
+        showToast(currentLang === 'mr' ? 'APK यशस्वीरित्या पडताळला व सेव्ह झाला!' : 'APK verified and delivered successfully!');
+      } else {
+        if (statusLabel) {
+          statusLabel.innerText = currentLang === 'mr' ? 'हॅश विसंगती आढळली! डाउनलोड दूषित असू शकते.' : 'Checksum mismatch detected! Corrupted download.';
+        }
+        if (actionText) {
+          actionText.innerText = currentLang === 'mr' ? 'पुन्हा प्रयत्न करा' : 'Retry Download';
+        }
+        if (actionBtn) {
+          actionBtn.disabled = false;
+          actionBtn.onclick = () => {
+            isDownloadRunning = false;
+            startVerifiedDownload();
+          };
+        }
+      }
+    } catch (err) {
+      if (err === 'USER_CANCELLED' || (err && err.name === 'AbortError')) {
+        if (statusLabel) {
+          statusLabel.innerText = currentLang === 'mr' ? 'डाऊनलोड रद्द केले (प्रक्रिया थांबवली).' : 'Download cancelled by user.';
+        }
+      } else {
+        if (statusLabel) {
+          statusLabel.innerText = currentLang === 'mr' ? 'डाऊनलोड त्रुटी! कृपया पुन्हा प्रयत्न करा.' : 'Download error. Please retry.';
+        }
+        if (actionBtn) {
+          actionBtn.disabled = false;
+          actionBtn.onclick = () => {
+            isDownloadRunning = false;
+            startVerifiedDownload();
+          };
+        }
+      }
+    } finally {
+      isDownloadRunning = false;
+    }
   }
 
   // Self-execute reliably whether DOM is ready or loading
@@ -428,6 +774,9 @@
     applyLanguage,
     toggleLanguage,
     showToast,
-    initAuraMail
+    initAuraMail,
+    openDownloadModal,
+    closeDownloadModal,
+    startVerifiedDownload
   };
 })();

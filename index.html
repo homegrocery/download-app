@@ -104,28 +104,28 @@
           <div class="marquee-item">
             <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
             <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
-            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <a href="#download" class="download-trigger" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
             <span class="marquee-star">✦</span>
           </div>
           <!-- Item 2 (Replicated for infinite seamless marquee loop) -->
           <div class="marquee-item">
             <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
             <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
-            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <a href="#download" class="download-trigger" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
             <span class="marquee-star">✦</span>
           </div>
           <!-- Item 3 (Replicated) -->
           <div class="marquee-item">
             <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
             <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
-            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <a href="#download" class="download-trigger" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
             <span class="marquee-star">✦</span>
           </div>
           <!-- Item 4 (Replicated) -->
           <div class="marquee-item">
             <span class="marquee-pill" data-i18n="announcementCategory">अपडेट</span>
             <span data-i18n="announcement">घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!</span>
-            <a href="#download" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
+            <a href="#download" class="download-trigger" data-i18n="announcementAction">थेट डाऊनलोड (v1.0.3) &rarr;</a>
             <span class="marquee-star">✦</span>
           </div>
         </div>
@@ -158,7 +158,7 @@
           </button>
 
           <!-- Desktop CTA -->
-          <a href="#download" class="shimmer-btn" style="padding: 9px 18px; font-size: 0.88rem;">
+          <a href="#download" class="shimmer-btn download-trigger" style="padding: 9px 18px; font-size: 0.88rem;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
@@ -183,7 +183,7 @@
         <a href="#download" data-i18n="navDownload">डाऊनलोड</a>
         <a href="#faq" data-i18n="navFaq">प्रश्नोत्तरे</a>
         <a href="./privacy" data-i18n="navPrivacy">गोपनीयता धोरण</a>
-        <a href="https://homegrocery.online/HomeGrocery-v1.0.3-build5.apk" class="shimmer-btn" style="margin-top: 12px; text-align: center;">
+        <a href="#download" class="shimmer-btn download-trigger" style="margin-top: 12px; text-align: center;">
           <span data-i18n="heroDownloadBtn">थेट APK डाऊनलोड करा (v1.0.3)</span>
         </a>
       </div>
@@ -208,7 +208,7 @@
           </p>
 
           <div class="hero-cta-group">
-            <a href="https://homegrocery.online/HomeGrocery-v1.0.3-build5.apk" class="shimmer-btn" id="heroDownloadBtn">
+            <a href="#download" class="shimmer-btn download-trigger" id="heroDownloadBtn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -529,14 +529,14 @@
               </p>
 
               <div>
-                <a href="https://homegrocery.online/HomeGrocery-v1.0.3-build5.apk" class="shimmer-btn" style="padding: 16px 32px; font-size: 1.05rem;">
+                <button id="primaryDownloadBtn" class="shimmer-btn download-trigger" style="padding: 16px 32px; font-size: 1.05rem; cursor: pointer; border: none;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
                   <span data-i18n="dlBtnText">अधिकृत APK डाऊनलोड करा (v1.0.3 Build 5)</span>
-                </a>
+                </button>
                 <div style="margin-top: 8px; font-size: 0.82rem; color: #94a3b8;" data-i18n="dlBtnSub">
                   आकार: 7.49 MB • Android 5.1+
                 </div>
@@ -731,7 +731,7 @@
             <ul class="footer-links">
               <li style="color: #cbd5e1; font-weight: 600;" data-i18n="footerDev">संतोष कोळी (Santosh Koli)</li>
               <li>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=homegrocery.security@gmail.com&su=Home%20Grocery%20Support" target="_blank" rel="noopener noreferrer" id="supportMailLink" style="color: var(--accent-cyan-light); word-break: break-all; font-size: 0.88rem; text-decoration: underline; display: inline-flex; align-items: center; gap: 6px;">
+                <a href="mailto:homegrocery.security@gmail.com?subject=Home%20Grocery%20Support" id="supportMailLink" style="color: var(--accent-cyan-light); word-break: break-all; font-size: 0.88rem; text-decoration: underline; display: inline-flex; align-items: center; gap: 6px;">
                   <span>✉️</span> <span>homegrocery.security@gmail.com</span> <span style="font-size: 0.75rem;">↗</span>
                 </a>
               </li>
@@ -744,6 +744,144 @@
         </div>
       </div>
     </footer>
+
+    <!-- ======================================================== -->
+    <!-- CRYPTOGRAPHIC DOWNLOAD & INTEGRITY VAULT MODAL           -->
+    <!-- Matching AuraMail Cyberpunk / Neon Cyan Theme            -->
+    <!-- ======================================================== -->
+    <div id="downloadModal" class="dl-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="dlModalTitle" style="display: none;">
+      <div class="dl-modal-card">
+        <!-- Terminal Header -->
+        <div class="dl-modal-header">
+          <div class="dl-header-left">
+            <div class="dl-pulse-dot"></div>
+            <div class="dl-header-titles">
+              <h3 id="dlModalTitle" class="dl-modal-title" data-i18n="dlModalTitle">अधिकृत उत्पादन डाऊनलोडर</h3>
+              <span class="dl-modal-sub" data-i18n="dlModalSub">क्रिप्टोग्राफिक पडताळणी गेटवे • v1.0.3 (Build 5)</span>
+            </div>
+          </div>
+          <button id="dlModalCloseBtn" class="dl-close-btn" onclick="window.HomeGroceryAura ? window.HomeGroceryAura.closeDownloadModal() : null" aria-label="Close Downloader Window">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Release Info Summary Card -->
+        <div class="dl-meta-pill-box">
+          <div class="dl-meta-item">
+            <span class="dl-meta-label" data-i18n="dlMetaVer">आवृत्ती:</span>
+            <span class="dl-meta-val">v1.0.3 (Build 5)</span>
+          </div>
+          <div class="dl-meta-item">
+            <span class="dl-meta-label" data-i18n="dlMetaCode">versionCode:</span>
+            <span class="dl-meta-val">33</span>
+          </div>
+          <div class="dl-meta-item">
+            <span class="dl-meta-label" data-i18n="dlMetaChannel">चॅनेल:</span>
+            <span class="dl-meta-val dl-pill-cyan">STABLE PRODUCTION</span>
+          </div>
+          <div class="dl-meta-item">
+            <span class="dl-meta-label" data-i18n="dlMetaSize">आकार:</span>
+            <span class="dl-meta-val">7.49 MB</span>
+          </div>
+        </div>
+
+        <!-- Pipeline Steps Tracker -->
+        <div class="dl-pipeline-steps">
+          <div class="dl-step active" id="dlStep1">
+            <div class="dl-step-indicator">
+              <span class="dl-step-num">१</span>
+              <svg class="dl-step-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="dl-step-text" data-i18n="dlStep1Text">मेनिफेस्ट हँडशेक</div>
+          </div>
+          <div class="dl-step-line" id="dlLine1"></div>
+          <div class="dl-step" id="dlStep2">
+            <div class="dl-step-indicator">
+              <span class="dl-step-num">२</span>
+              <svg class="dl-step-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="dl-step-text" data-i18n="dlStep2Text">थेट बायनरी प्रवाह</div>
+          </div>
+          <div class="dl-step-line" id="dlLine2"></div>
+          <div class="dl-step" id="dlStep3">
+            <div class="dl-step-indicator">
+              <span class="dl-step-num">३</span>
+              <svg class="dl-step-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="dl-step-text" data-i18n="dlStep3Text">SHA-256 पडताळणी</div>
+          </div>
+          <div class="dl-step-line" id="dlLine3"></div>
+          <div class="dl-step" id="dlStep4">
+            <div class="dl-step-indicator">
+              <span class="dl-step-num">४</span>
+              <svg class="dl-step-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="dl-step-text" data-i18n="dlStep4Text">APK वितरण</div>
+          </div>
+        </div>
+
+        <!-- Live Progress Status Display -->
+        <div class="dl-progress-container">
+          <div class="dl-progress-header">
+            <span id="dlStatusLabel" class="dl-status-label" data-i18n="dlStatusInit">सुरक्षित डाऊनलोड सुरू करत आहे...</span>
+            <span id="dlProgressPercent" class="dl-progress-percent">0%</span>
+          </div>
+
+          <!-- Glowing Progress Bar -->
+          <div class="dl-progress-track">
+            <div id="dlProgressBar" class="dl-progress-bar" style="width: 0%;">
+              <div class="dl-progress-glow"></div>
+            </div>
+          </div>
+
+          <div class="dl-progress-footer">
+            <span id="dlBytesText" class="dl-bytes-text">0 MB / 7.49 MB</span>
+            <span id="dlSpeedText" class="dl-speed-text">-- KB/s</span>
+          </div>
+        </div>
+
+        <!-- Cryptographic Checksum Comparison Box -->
+        <div class="dl-checksum-card">
+          <div class="dl-cs-row">
+            <span class="dl-cs-label" data-i18n="dlExpectedHashLabel">अधिकृत SHA-256 (अपेक्षित):</span>
+            <span class="dl-cs-hash font-mono">A47BD907B41A2950B1136E4A6707C5C1DA0A7D617FDE67200AC14ADBA2EFCF93</span>
+          </div>
+          <div class="dl-cs-row" id="dlComputedHashRow" style="display: none;">
+            <span class="dl-cs-label" data-i18n="dlComputedHashLabel">मोजलेला SHA-256 (गणित):</span>
+            <span id="dlComputedHashVal" class="dl-cs-hash font-mono text-cyan">गणितात आहे...</span>
+          </div>
+          <div id="dlHashVerdict" class="dl-hash-verdict" style="display: none;">
+            <span class="dl-verdict-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dlVerdictSuccess">१००% क्रिप्टोग्राफिक हॅश पडताळणी यशस्वी</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Installation Guidance Box (Revealed on Completion) -->
+        <div id="dlSuccessGuide" class="dl-install-guide" style="display: none;">
+          <div class="dl-guide-icon">🛡️</div>
+          <div class="dl-guide-content">
+            <h4 data-i18n="dlGuideTitle">APK यशस्वीरित्या डाऊनलोड झाला! इन्स्टॉल कसे करावे:</h4>
+            <ol>
+              <li data-i18n="dlGuide1">डाऊनलोड्स फोल्डरमधील <strong>HomeGrocery-v1.0.3-build5.apk</strong> उघडा.</li>
+              <li data-i18n="dlGuide2">Google Play Protect सूचना आल्यास <strong>'More details'</strong> वर टॅप करून <strong>'Install anyway'</strong> निवडा.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Actions / Controls -->
+        <div class="dl-modal-actions">
+          <button id="dlCancelBtn" class="dl-btn-cancel" onclick="window.HomeGroceryAura ? window.HomeGroceryAura.closeDownloadModal() : null" data-i18n="dlBtnCancel">रद्द करा (थांबवा)</button>
+          <button id="dlActionPrimaryBtn" class="shimmer-btn" style="padding: 10px 22px; font-size: 0.9rem;">
+            <span id="dlActionBtnText" data-i18n="dlBtnStart">डाऊनलोड सुरू करा</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Noscript Fallback for Search Engines and Non-JS Browsers -->
     <noscript>
