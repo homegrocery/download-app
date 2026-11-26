@@ -27,7 +27,7 @@
     mr: {
       langBtn: 'मराठी',
       langNext: 'English',
-      announcement: 'घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!',
+      announcement: 'घरगुती किराणा यादी v1.0.3 (Build 6) अधिकृत स्थिर आवृत्ती आता उपलब्ध आहे!',
       announcementBadge: 'ताज्या घडामोडी',
       announcementCategory: 'अपडेट',
       announcementAction: 'थेट डाऊनलोड (v1.0.3) →',
@@ -110,7 +110,7 @@
       dlBadge: 'अधिकृत प्रकाशन',
       dlTitle: 'आताच Android साठी डाऊनलोड करा',
       dlDesc: 'अधिकृत क्रिप्टोग्राफिक SHA-256 पडताळणीसह थेट सुरक्षित APK डाऊनलोड करा. तृतीय-पक्ष ॲप स्टोअरवर अवलंबून राहण्याची गरज नाही.',
-      dlBtnText: 'अधिकृत APK डाऊनलोड करा (v1.0.3 Build 5)',
+      dlBtnText: 'अधिकृत APK डाऊनलोड करा (v1.0.3 Build 6)',
       dlBtnSub: 'आकार: 7.49 MB • Android 5.1+',
       shaTitle: 'अधिकृत SHA-256 क्रिप्टोग्राफिक चेकसम',
       shaCopyBtn: 'हॅश कॉपी करा',
@@ -138,7 +138,7 @@
 
       // Verified Downloader Window
       dlModalTitle: 'अधिकृत उत्पादन डाऊनलोडर',
-      dlModalSub: 'क्रिप्टोग्राफिक पडताळणी गेटवे • v1.0.3 (Build 5)',
+      dlModalSub: 'क्रिप्टोग्राफिक पडताळणी गेटवे • v1.0.3 (Build 6)',
       dlMetaVer: 'आवृत्ती:',
       dlMetaCode: 'versionCode:',
       dlMetaChannel: 'चॅनेल:',
@@ -157,7 +157,7 @@
       dlComputedHashLabel: 'मोजलेला SHA-256 (गणित):',
       dlVerdictSuccess: '१००% क्रिप्टोग्राफिक हॅश पडताळणी यशस्वी',
       dlGuideTitle: 'APK यशस्वीरित्या डाऊनलोड झाला! इन्स्टॉल कसे करावे:',
-      dlGuide1: 'डाऊनलोड्स फोल्डरमधील HomeGrocery-v1.0.3-build5.apk उघडा.',
+      dlGuide1: 'डाऊनलोड्स फोल्डरमधील HomeGrocery-v1.0.3-build6.apk उघडा.',
       dlGuide2: 'Google Play Protect सूचना आल्यास \'More details\' वर टॅप करून \'Install anyway\' निवडा.',
       dlBtnCancel: 'रद्द करा (थांबवा)',
       dlBtnStart: 'डाऊनलोड सुरू करा',
@@ -167,7 +167,7 @@
     en: {
       langBtn: 'EN',
       langNext: 'मराठी',
-      announcement: 'Home Grocery v1.0.3 (Build 5) Official Stable Release is now live!',
+      announcement: 'Home Grocery v1.0.3 (Build 6) Official Stable Release is now live!',
       announcementBadge: 'UPDATES',
       announcementCategory: 'UPDATE',
       announcementAction: 'Download Now (v1.0.3) →',
@@ -250,7 +250,7 @@
       dlBadge: 'Official Distribution',
       dlTitle: 'Download Home Grocery for Android',
       dlDesc: 'Download the cryptographically verified APK directly. No middleman app store, no hidden tracking, and instant installation.',
-      dlBtnText: 'Download Official APK (v1.0.3 Build 5)',
+      dlBtnText: 'Download Official APK (v1.0.3 Build 6)',
       dlBtnSub: 'Size: 7.49 MB • Android 5.1+',
       shaTitle: 'Official SHA-256 Cryptographic Checksum',
       shaCopyBtn: 'Copy Hash',
@@ -278,7 +278,7 @@
 
       // Verified Downloader Window
       dlModalTitle: 'Official Production Downloader',
-      dlModalSub: 'Cryptographic Integrity Gateway • v1.0.3 (Build 5)',
+      dlModalSub: 'Cryptographic Integrity Gateway • v1.0.3 (Build 6)',
       dlMetaVer: 'Version:',
       dlMetaCode: 'versionCode:',
       dlMetaChannel: 'Channel:',
@@ -297,7 +297,7 @@
       dlComputedHashLabel: 'Computed SHA-256 (Calculated):',
       dlVerdictSuccess: '100% Cryptographic Checksum Match Verified',
       dlGuideTitle: 'APK delivered successfully! How to install:',
-      dlGuide1: 'Open HomeGrocery-v1.0.3-build5.apk from your Downloads folder.',
+      dlGuide1: 'Open HomeGrocery-v1.0.3-build6.apk from your Downloads folder.',
       dlGuide2: 'If Google Play Protect alert appears, tap \'More details\' and select \'Install anyway\'.',
       dlBtnCancel: 'Cancel (Stop)',
       dlBtnStart: 'Start Download',
@@ -544,12 +544,12 @@
 
   const OFFICIAL_RELEASE = {
     versionName: '1.0.3',
-    buildNumber: 5,
-    versionCode: 33,
-    apkFilename: 'HomeGrocery-v1.0.3-build5.apk',
-    downloadUrl: './HomeGrocery-v1.0.3-build5.apk',
+    buildNumber: 6,
+    versionCode: 34,
+    apkFilename: 'HomeGrocery-v1.0.3-build6.apk',
+    downloadUrl: './HomeGrocery-v1.0.3-build6.apk',
     sizeBytes: 7855609,
-    expectedSha256: 'A47BD907B41A2950B1136E4A6707C5C1DA0A7D617FDE67200AC14ADBA2EFCF93'
+    expectedSha256: 'CB2FFA5CB4BC0A20D97C8BC9AF546E2F4DF3DB9AFD3CACC20F2999787847F20E'
   };
 
   function openDownloadModal() {

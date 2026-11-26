@@ -1,14 +1,14 @@
 {
   "version": "1.0.3",
-  "versionCode": 33,
-  "build": 5,
+  "versionCode": 34,
+  "build": 6,
   "packageId": "com.homegrocery.app",
   "isMandatory": true,
-  "minSupportedBuild": 4,
-  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build5.apk",
+  "minSupportedBuild": 5,
+  "apkUrl": "https://homegrocery.online/HomeGrocery-v1.0.3-build6.apk",
   "apkSize": 7855609,
-  "sha256": "A47BD907B41A2950B1136E4A6707C5C1DA0A7D617FDE67200AC14ADBA2EFCF93",
-  "releaseNotes": "Home Grocery v1.0.3 (Build 5) Production Release - Enhanced Live Telemetry, Error Logging, and Stability Improvements",
-  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 5) अधिकृत उत्पादन आवृत्ती - वर्धित थेट टेलीमेट्री आणि कार्यक्षमता सुधारणा",
-  "publishedAt": "2026-11-25T17:15:00.000Z"
+  "sha256": "CB2FFA5CB4BC0A20D97C8BC9AF546E2F4DF3DB9AFD3CACC20F2999787847F20E",
+  "releaseNotes": "Home Grocery v1.0.3 (Build 6) Production Release - Cold start seamless transition, zero splash flash, authentic signing, and critical stability improvements",
+  "releaseNotesMr": "घरगुती किराणा यादी v1.0.3 (Build 6) अधिकृत उत्पादन आवृत्ती - ॲप सुरू होताना अखंड अनुभव, थेट स्प्लॅश ट्रान्झिशन आणि आवश्यक कार्यक्षमता सुधारणा",
+  "publishedAt": "2026-11-26T12:35:00.000Z"
 }
